@@ -42,6 +42,7 @@
 	<mango:Event name="beforeHtmlHeadEnd" />
 </head>
 <body>
+<mango:Event name="beforeHtmlBodyStart" />
 <!-- Begin #mainWrapper -->
 <div id="mainWrapper">
 	<!-- Begin #wrapper -->

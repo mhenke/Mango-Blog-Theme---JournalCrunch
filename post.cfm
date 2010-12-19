@@ -44,6 +44,7 @@
 	<mango:Event name="beforeHtmlHeadEnd" />
 </head>
 <body>
+<mango:Event name="beforeHtmlBodyStart" />
 <!-- Begin #mainWrapper -->
 <div id="mainWrapper">
 	<!-- Begin #wrapper -->
@@ -204,68 +205,15 @@
 
 <!-- Begin #colRight -->
 	<div id="colRight">
-			<div class="rightBox"><div class="rightBoxInner">	
-			<h2>Recent Comments</h2><ul id="recentcomments"><li class="recentcomments">admin on <a href="http://wordpress.site5.net/journalcrunch/?p=39#comment-11">Pellentesque dapibus ullamcorper leo</a></li><li class="recentcomments">admin on <a href="http://wordpress.site5.net/journalcrunch/?p=39#comment-10">Pellentesque dapibus ullamcorper leo</a></li><li class="recentcomments">admin on <a href="http://wordpress.site5.net/journalcrunch/?p=39#comment-9">Pellentesque dapibus ullamcorper leo</a></li><li class="recentcomments">admin on <a href="http://wordpress.site5.net/journalcrunch/?p=39#comment-8">Pellentesque dapibus ullamcorper leo</a></li><li class="recentcomments">admin on <a href="http://wordpress.site5.net/journalcrunch/?p=39#comment-7">Pellentesque dapibus ullamcorper leo</a></li></ul></div></div><div class="rightBox"><div class="rightBoxInner">	
-			<h2 class="twitter">Tweets</h2>				<div id="twitter">
-							<ul id="twitter_update_list"><li><span>@<a href="http://twitter.com/rickyrobinson">rickyrobinson</a> Happy to hear the website migration was fast and easy! :)</span> <a href="http://twitter.com/site5/statuses/15884874317565952" style="font-size: 85%;">about 2 hours ago</a></li><li><span>@<a href="http://twitter.com/gabrielarana">gabrielarana</a> We are happy to have you Gabriel, thanks for the fantastic praise of our hosting services. :)</span> <a href="http://twitter.com/site5/statuses/15884630779502592" style="font-size: 85%;">about 2 hours ago</a></li><li><span>@<a href="http://twitter.com/mark_rafferty">mark_rafferty</a> Hi Mark, is everything going ok? Let me know if there is anything we can do to help you out. :)</span> <a href="http://twitter.com/site5/statuses/15884455755386880" style="font-size: 85%;">about 2 hours ago</a></li></ul>
-					<a class="action" href="http://twitter.com/site5">Follow Us on Twitter! »</a>
-				</div>
-				
-				<script src="http://twitter.com/statuses/user_timeline/site5.json?callback=twitterCallback3&amp;count=3" type="text/javascript">
-				</script>
-	</div></div><div class="rightBox"><div class="rightBoxInner">	<h2><span class="cufon cufon-canvas" style="width: 74px; height: 15px;"><canvas width="82" height="16" style="width: 82px; height: 16px; top: 0px; left: -1px;"></canvas><span class="cufon-alt">Calendar</span></span></h2><div id="calendar_wrap"><table summary="Calendar" id="wp-calendar">
-	<caption>December 2010</caption>
-	<thead>
-	<tr>
-		<th title="Monday" scope="col">M</th>
-		<th title="Tuesday" scope="col">T</th>
-		<th title="Wednesday" scope="col">W</th>
-		<th title="Thursday" scope="col">T</th>
-		<th title="Friday" scope="col">F</th>
-		<th title="Saturday" scope="col">S</th>
-		<th title="Sunday" scope="col">S</th>
-	</tr>
-	</thead>
-
-	<tfoot>
-	<tr>
-		<td id="prev" colspan="3"><a title="View posts for November 2010" href="http://wordpress.site5.net/journalcrunch/?m=201011">« Nov</a></td>
-		<td class="pad">&nbsp;</td>
-		<td class="pad" id="next" colspan="3">&nbsp;</td>
-	</tr>
-	</tfoot>
-
-	<tbody>
-	<tr>
-		<td class="pad" colspan="2">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-	</tr>
-	<tr>
-		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
-	</tr>
-	<tr>
-		<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td id="today">18</td><td>19</td>
-	</tr>
-	<tr>
-		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
-	</tr>
-	<tr>
-		<td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
-		<td colspan="2" class="pad">&nbsp;</td>
-	</tr>
-	</tbody>
-	</table></div></div></div><div class="rightBox"><div class="rightBoxInner">	<h2><span class="cufon cufon-canvas" style="width: 53px; height: 15px;"><canvas width="61" height="16" style="width: 61px; height: 16px; top: 0px; left: -1px;"></canvas><span class="cufon-alt">Categs</span></span></h2>		<ul>
-	<li class="cat-item cat-item-3"><a title="View all posts filed under Freebies" href="http://wordpress.site5.net/journalcrunch/?cat=3">Freebies</a>
-</li>
-	<li class="cat-item cat-item-4"><a title="View all posts filed under Photoshop" href="http://wordpress.site5.net/journalcrunch/?cat=4">Photoshop</a>
-</li>
-	<li class="cat-item cat-item-5"><a title="View all posts filed under Showcases" href="http://wordpress.site5.net/journalcrunch/?cat=5">Showcases</a>
-</li>
-	<li class="cat-item cat-item-6"><a title="View all posts filed under Tutorials" href="http://wordpress.site5.net/journalcrunch/?cat=6">Tutorials</a>
-</li>
-	<li class="cat-item cat-item-1"><a title="View all posts filed under Uncategorized" href="http://wordpress.site5.net/journalcrunch/?cat=1">Uncategorized</a>
-</li>
-		</ul>
-</div></div>	</div>
+	
+	<mangox:PodGroup locationId="sidebar-page" template="page">
+			<mangox:TemplatePod id="page-menu" title="Page Menu">
+			<template:pageMenu />
+			</mangox:TemplatePod>
+			<template:sidebar />
+		</mangox:PodGroup>	
+		
+	</div>
 	
 <!-- End #colRight -->	
 </div>
