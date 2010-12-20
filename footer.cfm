@@ -1,6 +1,8 @@
-
+<cfimport prefix="mango" taglib="../../tags/mango">
+<cfimport prefix="mangox" taglib="../../tags/mangoextras">
+<cfimport prefix="template" taglib=".">
 <div id="footerInner">
-				<div class="boxFooter">		<h2 class="footerTitle">Recent Posts</h2>		<ul>
+				<div class="boxFooter">		<h2 class="footerTitle">Favorite Links</h2>		<ul>
 
 				<li><a href="http://wordpress.site5.net/journalcrunch/?p=233" title="Nusquam percipitur cotidieque ut vis">Nusquam percipitur cotidieque ut vis</a></li>
 				<li><a href="http://wordpress.site5.net/journalcrunch/?p=41" title="Morbi in sem quis dui placerat ornare">Morbi in sem quis dui placerat ornare</a></li>
@@ -9,26 +11,22 @@
 				<li><a href="http://wordpress.site5.net/journalcrunch/?p=27" title="Tempor incididunt ut labore et">Tempor incididunt ut labore et</a></li>
 				</ul>
 
-		</div><div class="boxFooter"><h2 class="footerTitle">Meta Widget</h2>			<ul>
-						<li><a href="http://wordpress.site5.net/journalcrunch/wp-login.php">Log in</a></li>
-			<li><a href="http://wordpress.site5.net/journalcrunch/?feed=rss2" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-			<li><a href="http://wordpress.site5.net/journalcrunch/?feed=comments-rss2" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+		</div><div class="boxFooter"><h2 class="footerTitle">Text Widget</h2>			<ul>
 			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
 
 						</ul>
 </div>		<div class="boxFooter">		<h2 class="footerTitle">Recent Posts</h2>		<ul>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=233" title="Nusquam percipitur cotidieque ut vis">Nusquam percipitur cotidieque ut vis</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=41" title="Morbi in sem quis dui placerat ornare">Morbi in sem quis dui placerat ornare</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=39" title="Pellentesque dapibus ullamcorper leo">Pellentesque dapibus ullamcorper leo</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=33" title="Elcvne commune elaboraret his, mea amet luptatum">Elcvne commune elaboraret his, mea amet luptatum</a></li>
-
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=27" title="Tempor incididunt ut labore et">Tempor incididunt ut labore et</a></li>
-				</ul>
+	<ul>
+		<mango:Posts count="5" source="recent">
+		<mango:Post>
+			<li><a href="<mango:PostProperty link />"><mango:PostProperty title /></a><span class="recent_date"><mango:PostProperty date dateformat="m.dd" /></span></li>
+		</mango:Post>
+		</mango:Posts>
+		<mango:Archive pageSize="5"><mango:ArchiveProperty ifHasNextPage>
+		<li><a href="<mango:ArchiveProperty link />" title="Visit the archives!">Visit the archives for more!</a></li></mango:ArchiveProperty></mango:Archive>
+	</ul
 		</div><div class="boxFooter"><h2 class="footerTitle">Pages</h2>		<ul>
-			<li class="page_item page-item-2"><a href="http://wordpress.site5.net/journalcrunch/?page_id=2" title="About">About</a></li>
-<li class="page_item page-item-99"><a href="http://wordpress.site5.net/journalcrunch/?page_id=99" title="Contact">Contact</a></li>
-<li class="page_item page-item-126"><a href="http://wordpress.site5.net/journalcrunch/?page_id=126" title="Shortcodes">Shortcodes</a></li>
-		</ul>
+			<template:pageMenu />
 
 		</div>		<!-- BEGIN COPYRIGHT -->
 		<div id="copyright">
