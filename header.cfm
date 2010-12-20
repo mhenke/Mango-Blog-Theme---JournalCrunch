@@ -2,12 +2,12 @@
 <cfimport prefix="mangox" taglib="../../tags/mangoextras">
 <cfimport prefix="template" taglib=".">
 <!-- Begin #logo -->
-			 <div id="logo"><a href="http://wordpress.site5.net/journalcrunch/"><img src="<mango:Blog skinurl />assets/images/logo.png" alt="JournalCrunch by Site5.com" /></a></div>
+			 <div id="logo"><a href="http://wordpress.site5.net/journalcrunch/"><img src="<mango:Blog skinurl />assets/images/logo.gif" alt="JournalCrunch by Site5.com" /></a></div>
 			<!-- End #logo -->logo.png
 			<!-- Begin #topMenu -->
 			<div id="topMenu" class="ddsmoothmenu">
 				<ul id="menu-topmenu" class="menu">
-					<li><a class="current" href="<mango:Blog basePath />">front page</a></li>
+					<li><a class="current" href="<mango:Blog basePath />">Home</a></li>
 					<mango:Pages parentPage="">
 						<mango:Page>
 							<li id="menu-item-225" class="menu-item menu-item-type-custom current-menu-item current_page_item menu-item-home menu-item-225">

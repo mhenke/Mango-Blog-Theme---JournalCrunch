@@ -99,7 +99,7 @@
 			
 			<!-- Begin #featuredPosts -->
 			<div id="featuredPosts">
-				\\<div class="item ">
+				<div class="item ">
 				<h1><a href="http://wordpress.site5.net/journalcrunch/?p=39" title="Permanent Link to Pellentesque dapibus ullamcorper leo">Pellentesque dapibus ullamcorper leo</a></h1>
 			
 										<a href="http://wordpress.site5.net/journalcrunch/?p=39" title="Permanent Link to Pellentesque dapibus ullamcorper leo">
@@ -127,12 +127,13 @@
 							<img src="<mango:Blog skinurl />assets/images/nothumb.jpg"  alt="No Thumbnail"/>					
 							<h2><a href="<mango:PostProperty link />" rel="bookmark" title="Permanent Link to <mango:PostProperty title />"><mango:PostProperty title /></a></h2>
 							<div class="excerpt">
-								<cfoutput>
+								<cfsavecontent variable="testing">
 									<mango:PostProperty body />
-								</cfoutput>
-								<h4> &middot; By <mango:PostProperty author /> &middot; </h4>
+								</cfsavecontent>
+								
+								<cfoutput>#left(testing,125)#</cfoutput>
+								
 								<div class="meta"> <mango:PostProperty date dateformat="mmmm dd, yyyy" /> &nbsp;&nbsp;&nbsp;<img src="<mango:Blog skinurl />assets/images/ico_post_comments.png" alt="" /> 
-									<!---<a href="http://wordpress.site5.net/journalcrunch/?p=10#respond" title="Comment on Create a Cosmic Composition">No Comments</a>--->
 									<mango:PostProperty ifcommentsallowed><a href="<mango:PostProperty link />#respond" title="Comment on <mango:PostProperty title />"><mango:PostProperty ifCommentCountGT="0"><mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty></mango:PostProperty><mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty></a></mango:PostProperty>
 								</div>
 							</div>
