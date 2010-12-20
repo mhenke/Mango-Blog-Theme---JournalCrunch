@@ -2,10 +2,10 @@
 <cfimport prefix="mangox" taglib="../../tags/mangoextras">
 <cfimport prefix="template" taglib=".">
 <cfif thisTag.executionMode EQ "start">
-<div class="rightBox">
-	<div class="rightBoxInner">	
+
 	<!--- recent posts --->
-	<mangox:TemplatePod id="posts" title=""><h2>Recent Entries</h2>
+	<mangox:TemplatePod id="posts" title="">
+	<h2>Recent Entries</h2>
 	<ul>
 		<mango:Posts count="5" source="recent">
 		<mango:Post>
@@ -18,7 +18,8 @@
 	</mangox:TemplatePod>
 	
 	<!--- categories with RSS --->
-	<mangox:TemplatePod id="categories" title=""><h2>Categories</h2>
+	<mangox:TemplatePod id="categories" title="">
+	<h2>Categories</h2>
 	<ul>
 	<mango:Categories>
 		<mango:Category>
@@ -29,7 +30,8 @@
 	</mangox:TemplatePod>
 	
 	<!--- search box --->
-	<mangox:TemplatePod id="search" title=""><h2>Search It!</h2>
+	<mangox:TemplatePod id="search" title="">
+	<h2>Search It!</h2>
 	<form name="searchForm" id="search_form" method="get" action="<mango:Blog searchUrl />">
 		<input type="text" class="search_input" name="term" value="To search, type and hit enter" id="term" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" />
 		<input type="hidden" id="searchsubmit" value="Search" />
@@ -37,12 +39,14 @@
 	</mangox:TemplatePod>
 
 	<!--- category cloud --->
-	<mangox:TemplatePod id="category-cloud" title=""><h2>Tag Cloud</h2>
+	<mangox:TemplatePod id="category-cloud" title="">
+	<h2>Tag Cloud</h2>
 		<mangox:CategoryCloud />
 	</mangox:TemplatePod>
 	
 	<!--- all archives by month --->
-	<mangox:TemplatePod id="monthly-archives" title=""><h2>Monthly Archives</h2>
+	<mangox:TemplatePod id="monthly-archives" title="">
+	<h2>Monthly Archives</h2>
 		<ul><mango:Archives type="month" count="6"><mango:Archive>
 			<li><a href="<mango:ArchiveProperty link />"><mango:ArchiveProperty title dateformat="mmmm yyyy" /> (<mango:ArchiveProperty postcount />)</a></li>
 		</mango:Archive></mango:Archives>
@@ -69,6 +73,8 @@
 	
 	<!--- output all the pods, including the ones added by plugins --->
 	<mangox:Pods>
+	<div class="rightBox">
+	<div class="rightBoxInner">	
 		<mangox:Pod>
 			<mangox:PodProperty ifHasTitle>
 			<div class="widget">
@@ -82,7 +88,7 @@
 				<mangox:PodProperty content />
 			</mangox:PodProperty>
 		</mangox:Pod>
-	</mangox:Pods>
-</div>
+		</div>
 			</div>
+	</mangox:Pods>
 </cfif>

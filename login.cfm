@@ -4,39 +4,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
-	<meta http-equiv="Content-Type" content="text/html; charset=<mango:Blog charset />" />
-	<title>Login &#8212; <mango:Blog title /></title>
-	
-	<meta name="generator" content="Mango <mango:Blog version />" />
-	
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/custom.css" type="text/css" media="screen" />
-	<!--[if lte IE 7]>
-	<link rel="stylesheet" type="text/css" href="<mango:Blog skinurl />assets/css/ie7.css" media="screen" />
-	<![endif]-->
-	<!--[if lte IE 6]>
-	<link rel="stylesheet" type="text/css" href="<mango:Blog skinurl />assets/css/ie6.css" media="screen" />
-	<![endif]-->
-	
-	<meta name="robots" content="noindex, nofollow" />
+<mango:Event name="beforeHtmlHeadEnd" />
+	<cfinclude template="htmlhead.cfm" />
 	<mango:Event name="beforeHtmlHeadEnd" />
 </head>
-<body class="custom">
+<body>
 <mango:Event name="beforeHtmlBodyStart" />
-<div id="container">
-	<div id="masthead">
-		<h1><a href="<mango:Blog url />"><mango:Blog title /></a></h1>
-		<h3><mango:Blog tagline /></h3>
-	</div>
+<!-- Begin #mainWrapper -->
+<div id="mainWrapper">
+	<!-- Begin #wrapper -->
+	<div id="wrapper">
+		<!-- Begin #header -->
+		<div id="header">
+		<cfinclude template="header.cfm" />
+		</div>
+		<!-- End #header -->
+		<!-- Begin #content -->
+		<div style="position: relative;" id="content">
 
-	<ul id="nav">
-	</ul>
-	
-	<div id="header_img">
-		<img src="<mango:Blog skinurl />assets/images/header_4.jpg" width="770" height="140" />
-	</div>
-	<div id="content_box">
-		<div id="content" class="pages">
+<!-- Begin #colleft -->
+			<div id="colLeft">
 		
 		<h2>Login</h2>
 		<div class="entry">
@@ -58,17 +45,44 @@
 			</form>
 		
 		</div>
-		<div class="clear"></div>
-
-		</div>
-
 	</div>
-
-	<div id="footer"><mango:Event name="afterFooterStart" />
-		<p><mango:Blog title /> &mdash; <a href="http://www.mangoblog.org" title="Mango Blog - A ColdFusion blog engine">Powered by Mango Blog</a> &mdash; Design by <a href="http://www.tubetorial.com">Chris Pearson</a> ported by <a href="http://www.asfusion.com">AsFusion</a></p>
-	<mango:Event name="beforeFooterEnd" />
+			<!-- End #colLeft -->
+<!-- Begin #colRight -->
+	<div id="colRight">
+	
+		<mangox:PodGroup locationId="sidebar-page" template="page">
+	<mangox:TemplatePod id="page-menu" title="Page Menu">
+	<template:pageMenu />
+	</mangox:TemplatePod>
+	<template:sidebar />
+</mangox:PodGroup>
+		
 	</div>
+	
+<!-- End #colRight -->	
 </div>
+		<!-- End #content -->
+	</div>
+	<!-- End #wrapper -->
+	<!-- Begin #footer -->
+	<div id="footer">
+		<mango:Event name="afterFooterStart" />
+			<cfinclude template="footer.cfm" />
+		<mango:Event name="beforeFooterEnd" />
+	</div>
+
+	<!-- End #footer -->
+</div>
+<!-- End #mainWrapper -->
+<<script type="text/javascript">Cufon.now(); </script>
+
+<!-- Header Twitter Tooltip -->
+<div class="tooltip">
+				<ul id="twitter_tooltip"></ul>
+				<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/site5.json?callback=twitterCallback2&amp;count=1"></script>
+			</div>
 <mango:Event name="beforeHtmlBodyEnd" />
 </body>
+
+
 </html>

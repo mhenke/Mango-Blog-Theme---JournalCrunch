@@ -5,42 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 <mango:Post>
-	<meta http-equiv="Content-Type" content="text/html; charset=<mango:Blog charset />" />
-	<title><mango:Blog title /> &#8212; <mango:Blog tagline /></title>
-	<meta name="generator" content="Mango <mango:Blog version />" />
-	<meta name="description" content="<mango:Blog description />" />
-	
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/nivo-slider.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/ddsmoothmenu.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/prettyPhoto.css" type="text/css" media="screen" />
-	
-	<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.form.js"></script>
-
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/cufon-yui.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/twittercb.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/ddsmoothmenu.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/custom.js"></script>
-
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/Vegur_400-Vegur_700.font.js"></script>
-<script type="text/javascript">
-	Cufon.replace('h1',{hover:true,textShadow: '#fff 1px 1px'})('h2:not(.footerTitle,.boxFooter .twitter)',{hover:true,textShadow: '#fff 1px 1px'})('h3',{textShadow: '#fff 1px 1px'})('.reply',{hover:true});
-</script>
-
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://wordpress.site5.net/journalcrunch/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://wordpress.site5.net/journalcrunch/wp-includes/wlwmanifest.xml" /> 
-
-<link rel='index' title='The JournalCrunch by Site5.com' href='http://wordpress.site5.net/journalcrunch' />
-<meta name="generator" content="WordPress 3.0.1" />
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-
-	
-	<meta name="robots" content="index, follow" />
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<mango:Blog rssurl />" />
-	<link rel="alternate" type="application/atom+xml" title="Atom" href="<mango:Blog atomurl />" />	
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<mango:Blog apiurl />" />
+	<mango:Event name="beforeHtmlHeadEnd" />
+	<cfinclude template="htmlhead.cfm" />
 	<mango:Event name="beforeHtmlHeadEnd" />
 </head>
 <body>
@@ -51,52 +17,7 @@
 	<div id="wrapper">
 		<!-- Begin #header -->
 		<div id="header">
-
-			<!-- Begin #logo -->
-			 <div id="logo"><a href="http://wordpress.site5.net/journalcrunch/"><img src="<mango:Blog skinurl />assets/images/logo.png" alt="JournalCrunch by Site5.com" /></a></div>
-			<!-- End #logo -->logo.png
-			<!-- Begin #topMenu -->
-			<div id="topMenu" class="ddsmoothmenu">
-				<ul id="menu-topmenu" class="menu">
-					<li><a class="current" href="<mango:Blog basePath />">front page</a></li>
-					<mango:Pages>
-						<mango:Page>
-							<li id="menu-item-225" class="menu-item menu-item-type-custom current-menu-item current_page_item menu-item-home menu-item-225">
-								<a href="<mango:PageProperty link>" title="<mango:PageProperty title />">
-								<mango:PageProperty title />
-								</a>
-							</li>
-						</mango:Page>
-					</mango:Pages>
-				</ul>
-			</div>			
-			
-			<!-- End #topMenu -->
-			<!-- Begin #topSearch -->
-
-			<div id="topSearch">
-				<form id="searchform" action="" method="get">
-					<input type="text" id="s" name="s" value="" />
-				</form>
-			</div>
-			<!-- End #topSearch -->
-			<!-- BEGIN TOP SOCIAL LINKS -->
-			<div id="topSocial">
-				<ul>
-
-										<li><a href="http://www.twitter.com/site5" class="twitter tip" title="Follow Us on Twitter!">
-										<img src="<mango:Blog skinurl />assets/images/header_<mangox:Random items='1.jpg,2.jpg,3.jpg,4.jpg'/>" width="770" height="140" alt="<mango:Blog title />" title="<mango:Blog title />" />
-										<img src="<mango:Blog skinurl />assets/images/ico_twitter.png" alt="Follow Us on Twitter!" /></a></li>
-															<li><a href="http://www.facebook.com/site5" class="facebook" title="Join Us on Facebook!"><img src="<mango:Blog skinurl />assets/images/ico_facebook.png" alt="Join Us on Facebook!" /></a></li>
-										<li class="rss">
-											<a href="<mango:Blog rssurl />" title="RSS" class="rss">
-												<img src="<mango:Blog skinurl />assets/images/ico_rss.png" alt="Subcribe to Our RSS Feed" />
-											</a>
-										</li>
-				</ul>
-			</div>	
-			
-			<!-- END TOP SOCIAL LINKS -->
+			<cfinclude template="header.cfm" />
 		</div>
 		<!-- End #header -->
 		<!-- Begin #content -->
@@ -205,63 +126,25 @@
 
 <!-- Begin #colRight -->
 	<div id="colRight">
-	
-	<mangox:PodGroup locationId="sidebar-page" template="page">
+		<mangox:PodGroup locationId="sidebar-page" template="page">
 			<mangox:TemplatePod id="page-menu" title="Page Menu">
 			<template:pageMenu />
 			</mangox:TemplatePod>
 			<template:sidebar />
-		</mangox:PodGroup>	
-		
+		</mangox:PodGroup>
 	</div>
+	<!-- End #colRight -->	
 	
-<!-- End #colRight -->	
-</div>
-		<!-- End #content -->
+	</div>
+	<!-- End #content -->
 	</div>
 	<!-- End #wrapper -->
 	<!-- Begin #footer -->
 	<div id="footer">
-		<div id="footerInner">
-				<div class="boxFooter">		<h2 class="footerTitle">Recent Posts</h2>		<ul>
-
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=233" title="Nusquam percipitur cotidieque ut vis">Nusquam percipitur cotidieque ut vis</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=41" title="Morbi in sem quis dui placerat ornare">Morbi in sem quis dui placerat ornare</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=39" title="Pellentesque dapibus ullamcorper leo">Pellentesque dapibus ullamcorper leo</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=33" title="Elcvne commune elaboraret his, mea amet luptatum">Elcvne commune elaboraret his, mea amet luptatum</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=27" title="Tempor incididunt ut labore et">Tempor incididunt ut labore et</a></li>
-				</ul>
-
-		</div><div class="boxFooter"><h2 class="footerTitle">Meta Widget</h2>			<ul>
-						<li><a href="http://wordpress.site5.net/journalcrunch/wp-login.php">Log in</a></li>
-			<li><a href="http://wordpress.site5.net/journalcrunch/?feed=rss2" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-			<li><a href="http://wordpress.site5.net/journalcrunch/?feed=comments-rss2" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
-
-						</ul>
-</div>		<div class="boxFooter">		<h2 class="footerTitle">Recent Posts</h2>		<ul>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=233" title="Nusquam percipitur cotidieque ut vis">Nusquam percipitur cotidieque ut vis</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=41" title="Morbi in sem quis dui placerat ornare">Morbi in sem quis dui placerat ornare</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=39" title="Pellentesque dapibus ullamcorper leo">Pellentesque dapibus ullamcorper leo</a></li>
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=33" title="Elcvne commune elaboraret his, mea amet luptatum">Elcvne commune elaboraret his, mea amet luptatum</a></li>
-
-				<li><a href="http://wordpress.site5.net/journalcrunch/?p=27" title="Tempor incididunt ut labore et">Tempor incididunt ut labore et</a></li>
-				</ul>
-		</div><div class="boxFooter"><h2 class="footerTitle">Pages</h2>		<ul>
-			<li class="page_item page-item-2"><a href="http://wordpress.site5.net/journalcrunch/?page_id=2" title="About">About</a></li>
-<li class="page_item page-item-99"><a href="http://wordpress.site5.net/journalcrunch/?page_id=99" title="Contact">Contact</a></li>
-<li class="page_item page-item-126"><a href="http://wordpress.site5.net/journalcrunch/?page_id=126" title="Shortcodes">Shortcodes</a></li>
-		</ul>
-
-		</div>		<!-- BEGIN COPYRIGHT -->
-		<div id="copyright">
-			© Copyright 2010 JournalCrunch by <a href="http://www.site5.com">Site5.com</a>. All Rights Reserved.  
-				<div id="site5bottom"><a href="http://gk.site5.com/t/239">Site5.com | Experts in Web Hosting.</a></div>
-		</div>
-		<!-- END COPYRIGHT -->	
-		</div>
+		<mango:Event name="afterFooterStart" />
+			<cfinclude template="footer.cfm" />
+		<mango:Event name="beforeFooterEnd" />
 	</div>
-
 	<!-- End #footer -->
 </div>
 <!-- End #mainWrapper -->
