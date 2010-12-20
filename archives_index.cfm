@@ -116,29 +116,42 @@
 		<p><input name="submit" class="form_submit" type="submit" id="submit" src="<mango:Blog skinurl />assets/images/submit_comment.gif" value="Submit" /></p>
 		</form>
 </mango:PageProperty>
-		
-</div> <!-- Close #comments container -->
-<div class="clear flat"></div>
+		</div>
+			</div>
+			<!-- End #colLeft -->
+	
+			<!-- Begin #colRight -->
+			<div id="colRight">
+				<mangox:PodGroup locationId="sidebar-page" template="page">
+					<mangox:TemplatePod id="page-menu" title="Page Menu">
+					<template:pageMenu />
+					</mangox:TemplatePod>
+					<template:sidebar />
+				</mangox:PodGroup>
+			</div>
+			<!-- End #colRight -->	
+		</div>
+		<!-- End #content -->
+	</div>
+	<!-- End #wrapper -->
+	<!-- Begin #footer -->
+	<div id="footer">
+		<mango:Event name="afterFooterStart" />
+			<cfinclude template="footer.cfm" />
+		<mango:Event name="beforeFooterEnd" />
+	</div>
+	<!-- End #footer -->
 </div>
-		
-<div id="sidebar">
-	<ul class="sidebar_list">
-		<mangox:PodGroup locationId="sidebar-page" template="page">
-			<mangox:TemplatePod id="page-menu" title="Page Menu">
-			<template:pageMenu />
-			</mangox:TemplatePod>
-			<template:sidebar />
-		</mangox:PodGroup>	
-	</ul>
-	</div>
-	</div>
+<!-- End #mainWrapper -->
+<script type="text/javascript">Cufon.now(); </script>
 
-	<div id="footer"><mango:Event name="afterFooterStart" />
-		<p><mango:Blog title /> &mdash; <a href="http://www.mangoblog.org" title="Mango Blog - A ColdFusion blog engine">Powered by Mango Blog</a> &mdash; Design by <a href="http://www.tubetorial.com">Chris Pearson</a> ported by <a href="http://www.asfusion.com">AsFusion</a></p>
-	<mango:Event name="beforeFooterEnd" />
-	</div>
+<!-- Header Twitter Tooltip -->
+<div class="tooltip">
+	<ul id="twitter_tooltip"></ul>
+	<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/site5.json?callback=twitterCallback2&amp;count=1"></script>
 </div>
-<mango:Event name="beforeHtmlBodyEnd" />
 </mango:Page>
 </body>
+
+
 </html>

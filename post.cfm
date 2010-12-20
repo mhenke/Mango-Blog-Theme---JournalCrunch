@@ -148,7 +148,7 @@
 	<!-- End #footer -->
 </div>
 <!-- End #mainWrapper -->
-<<script type="text/javascript">Cufon.now(); </script>
+<script type="text/javascript">Cufon.now(); </script>
 
 <!-- Header Twitter Tooltip -->
 <div class="tooltip">

@@ -49,14 +49,7 @@
 			<!-- End #colLeft -->
 <!-- Begin #colRight -->
 	<div id="colRight">
-	
-		<mangox:PodGroup locationId="sidebar-page" template="page">
-	<mangox:TemplatePod id="page-menu" title="Page Menu">
-	<template:pageMenu />
-	</mangox:TemplatePod>
-	<template:sidebar />
-</mangox:PodGroup>
-		
+				
 	</div>
 	
 <!-- End #colRight -->	
@@ -74,7 +67,7 @@
 	<!-- End #footer -->
 </div>
 <!-- End #mainWrapper -->
-<<script type="text/javascript">Cufon.now(); </script>
+<script type="text/javascript">Cufon.now(); </script>
 
 <!-- Header Twitter Tooltip -->
 <div class="tooltip">
