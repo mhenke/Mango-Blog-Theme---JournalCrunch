@@ -69,11 +69,8 @@
 <!-- End #mainWrapper -->
 <script type="text/javascript">Cufon.now(); </script>
 
-<!-- Header Twitter Tooltip -->
-<div class="tooltip">
-				<ul id="twitter_tooltip"></ul>
-				<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/site5.json?callback=twitterCallback2&amp;count=1"></script>
-			</div>
+<cfinclude template="twittertooltip.cfm" />
+
 <mango:Event name="beforeHtmlBodyEnd" />
 </body>
 

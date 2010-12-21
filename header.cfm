@@ -2,23 +2,32 @@
 <cfimport prefix="mangox" taglib="../../tags/mangoextras">
 <cfimport prefix="template" taglib=".">
 <!-- Begin #logo -->
-			 <div id="logo"><a href="http://wordpress.site5.net/journalcrunch/"><img src="<mango:Blog skinurl />assets/images/logo.gif" alt="JournalCrunch by Site5.com" /></a></div>
-			<!-- End #logo -->logo.png
+			 <div id="logo"><a href="http://www.henke.ws/"><img src="<mango:Blog skinurl />assets/images/logo.gif" alt="JournalCrunch by Site5.com" /></a></div>
+			<!-- End #logo -->
 			<!-- Begin #topMenu -->
 			<div id="topMenu" class="ddsmoothmenu">
 				<ul id="menu-topmenu" class="menu">
 					<li><a class="current" href="<mango:Blog basePath />">Home</a></li>
 					<mango:Pages parentPage="">
-						<mango:Page>
-							<li id="menu-item-225" class="menu-item menu-item-type-custom current-menu-item current_page_item menu-item-home menu-item-225">
-								<a href="<mango:PageProperty link>" title="<mango:PageProperty title />">
+					<mango:Page>
+						<li class="menu-item">
+							<a href="<mango:PageProperty link>" title="<mango:PageProperty title />">
 								<mango:PageProperty title />
-								</a>
-							</li>
-						</mango:Page>
+							</a>
+								<mango:Pages ifCountGT="0" count="1">
+									<ul class="sub-menu">
+								</mango:Pages>
+								<mango:Pages from="1"><mango:Page>
+							        <li class="menu-item"><a href="<mango:PageProperty link />" title="<mango:PageProperty title />"><mango:PageProperty title /></a></li>
+								</mango:Page></mango:Pages>	
+								<mango:Pages ifCountGT="0" count="1">
+									</ul>
+								</mango:Pages>
+						</li>
+					</mango:Page>
 					</mango:Pages>
 				</ul>
-			</div>			
+			</div>		
 			
 			<!-- End #topMenu -->
 			<!-- Begin #topSearch -->

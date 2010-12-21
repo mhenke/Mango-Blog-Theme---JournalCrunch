@@ -26,7 +26,7 @@
 <ul>
 	<mango:Pages parentPage="#parent#">	
 		<mango:Page>
-				<mango:PageProperty ifiscurrentpage><li><a class="active"><mango:PageProperty title /></a>
+				<mango:PageProperty ifiscurrentpage><li class="page_item <mango:PageProperty ifiscurrentpage>current_page_item</mango:PageProperty>"><a class="active"><mango:PageProperty title /></a>
 					<template:pageMenu start="context">
 				</mango:PageProperty>
 				<mango:PageProperty ifisnotcurrentpage ifIsAncestorOfCurrentPage><li><a href="<mango:PageProperty link/>"><mango:PageProperty title /></a>

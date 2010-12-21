@@ -29,7 +29,7 @@
 				<div id="singlePost">
 					<h1><mango:PostProperty title /></h1>
 					<div class="meta">
-					 <mango:PostProperty date dateformat="mmmm d, yyyy" /> by <a title="Posts by <mango:PostProperty author />" href="http://wordpress.site5.net/journalcrunch/?author=1"><mango:PostProperty author /></a>&nbsp;&nbsp;&nbsp;<mango:PostProperty ifcommentsallowed><img alt="" src="<mango:Blog skinurl />assets/images/ico_post_comments.png"> <a title="Read Comments" href="#comment_list"><mango:PostProperty ifCommentCountGT="0" /><mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty><mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty></a>&nbsp;&nbsp;&nbsp;</mango:PostProperty><img alt="" src="<mango:Blog skinurl />/assets/images/ico_post_date.png"> Posted under:  <mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
+					 <mango:PostProperty date dateformat="mmmm d, yyyy" /> by <mango:Author><a href="<mango:AuthorProperty link />"><mango:PostProperty author /></a></mango:Author>&nbsp;&nbsp;&nbsp;<mango:PostProperty ifcommentsallowed><img alt="" src="<mango:Blog skinurl />assets/images/ico_post_comments.png"> <a title="Read Comments" href="#comment_list"><mango:PostProperty ifCommentCountGT="0" /><mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty><mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty></a>&nbsp;&nbsp;&nbsp;</mango:PostProperty><img alt="" src="<mango:Blog skinurl />/assets/images/ico_post_date.png"> Posted under:  <mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
 					</div>
 					<mango:PostProperty body />
 					<div class="postTags">
@@ -43,18 +43,25 @@
 </h2>
 	
 		<ul class="commentlist" id="comment_list">
-			<mango:Comments>
-			<mango:Comment>
-			<li class="comment even thread-even depth-1 clearfix <mango:CommentProperty ifIsAuthor> comment-author-admin</mango:CommentProperty>" id="comment-<mango:CommentProperty id />">
-				<div class="comment-meta commentmetadata clearfix">
-		    		<a href="#comment-<mango:CommentProperty id />" title="Permalink to this comment"><mango:CommentProperty currentCount /></a> <strong><mango:CommentProperty ifhasurl><a href='<mango:CommentProperty url />' rel='external nofollow'></mango:CommentProperty><mango:CommentProperty name /><mango:CommentProperty ifhasurl></a></mango:CommentProperty> </strong> <span><mango:CommentProperty date dateformat="mmm d, yyyy" /> at <mango:CommentProperty time /></span>
-		 		</div>
-				<div class="entry">
-					 <mango:CommentProperty content />
-				</div>
-			</li>
-			</mango:Comment>
-			</mango:Comments>
+			<mango:Comments>		
+			<ol class="commentlist">
+				<mango:Comment>
+					<li id="comment-<mango:CommentProperty id />" class="comment even thread-even depth-1">
+						<div class="c-grav"><mangox:Gravatar size="60" defaultimg="assets/images/no_gravatar.png" /></div>
+						<div class="c-body">
+							<div class="c-head">
+								<mango:CommentProperty ifhasurl><a href='<mango:CommentProperty url />' rel='external nofollow'></mango:CommentProperty><mango:CommentProperty name /><mango:CommentProperty ifhasurl></a></mango:CommentProperty>
+								<span class="c-permalink"><a href="#comment-<mango:CommentProperty id />" title="Permalink to this comment">PERMALINK</a></span>
+								<mango:CommentProperty ifIsAuthor><span class="asterisk">*</span></mango:CommentProperty>
+							</div>
+							<div class="c-date"><mango:CommentProperty date dateformat="mmm d, yyyy" /> at <mango:CommentProperty time /></div>
+							<p><mango:CommentProperty content /></p>
+							 <div class="reply"></div>
+						</div>
+					</li>
+		  		</mango:Comment>
+	  		</ol>
+		</mango:Comments>
 			
 			<mango:PostProperty ifcommentsallowed ifCommentCountLT="1">
 			<!-- If comments are open, but there are no comments. -->
@@ -150,11 +157,7 @@
 <!-- End #mainWrapper -->
 <script type="text/javascript">Cufon.now(); </script>
 
-<!-- Header Twitter Tooltip -->
-<div class="tooltip">
-				<ul id="twitter_tooltip"></ul>
-				<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/site5.json?callback=twitterCallback2&amp;count=1"></script>
-			</div>
+<cfinclude template="twittertooltip.cfm" />
 
 </body>
 

@@ -122,16 +122,16 @@
 			<div>
 			<mango:Posts count="9">
 				<mango:Post>
-					<div class="postBox lastBox">
+				<cfsavecontent variable="body_count"><mango:PostProperty body /></cfsavecontent>
+				<cfsavecontent variable="title_count"><mango:PostProperty title /></cfsavecontent>
+				
+					<div class="postBox <mango:Post ifCurrentIsThird>lastBox</mango:Post> <mango:Post ifCurrentIsLast>lastBox</mango:Post>">
 						<div class="postBoxInner">
 							<img src="<mango:Blog skinurl />assets/images/nothumb.jpg"  alt="No Thumbnail"/>					
-							<h2><a href="<mango:PostProperty link />" rel="bookmark" title="Permanent Link to <mango:PostProperty title />"><mango:PostProperty title /></a></h2>
+							<h2><a href="<mango:PostProperty link />" rel="bookmark" title="Permanent Link to <mango:PostProperty title />"><cfoutput>#left(title_count,25)#<cfif len(title_count) GT 25>...</cfif></cfoutput></a></h2>
 							<div class="excerpt">
-								<cfsavecontent variable="testing">
-									<mango:PostProperty body />
-								</cfsavecontent>
 								
-								<cfoutput>#left(testing,125)#</cfoutput>
+								<cfoutput>#left(body_count,125)#</cfoutput>
 								
 								<div class="meta"> <mango:PostProperty date dateformat="mmmm dd, yyyy" /> &nbsp;&nbsp;&nbsp;<img src="<mango:Blog skinurl />assets/images/ico_post_comments.png" alt="" /> 
 									<mango:PostProperty ifcommentsallowed><a href="<mango:PostProperty link />#respond" title="Comment on <mango:PostProperty title />"><mango:PostProperty ifCommentCountGT="0"><mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty></mango:PostProperty><mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty></a></mango:PostProperty>
@@ -158,11 +158,7 @@
 <!-- End #mainWrapper -->
 <script type="text/javascript">Cufon.now(); </script>
 
-<!-- Header Twitter Tooltip -->
-<div class="tooltip">
-<ul id="twitter_tooltip"></ul>
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/site5.json?callback=twitterCallback2&amp;count=1"></script>
-</div>
+<cfinclude template="twittertooltip.cfm" />
 
 </body>
 
