@@ -918,17 +918,17 @@ h2#commentsForm {
 
 /* COMMENTS F0RM */
 
-#commentform p {
+.commentform p {
 	margin:0;
 	padding:0;
 }
 
-#commentform label {
+.commentform label {
 	display:block;
 	padding:5px 0;
 }
 
-#commentform input, #commentform textarea {
+.commentform input, .commentform textarea {
 	border:1px solid #fff;
 	border-top:1px solid #B8C4C5;
 	border-left:1px solid #B8C4C5;
@@ -939,18 +939,18 @@ h2#commentsForm {
    width:350px;
 }
 
-#commentform input:focus, #commentform textarea:focus {
+.commentform input:focus, .commentform textarea:focus {
 	border:1px solid #45C0B6;
 }
 
 
-#commentform textarea {
+.commentform textarea {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:13px;
 	width:630px;
 }
 
-#commentform input#submit{
+.commentform input#submit{
 	border:none;
 	width:161px;
 	height:42px;

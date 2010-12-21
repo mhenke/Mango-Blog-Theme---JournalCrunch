@@ -42,7 +42,7 @@
 			<div id="topSocial">
 				<ul>
 
-										<li><a href="http://www.twitter.com/site5" class="twitter tip" title="Follow Us on Twitter!">
+										<li><a href="http://www.twitter.com/mikehenke" class="twitter tip" title="Follow Me on Twitter!">
 										<img src="<mango:Blog skinurl />assets/images/header_<mangox:Random items='1.jpg,2.jpg,3.jpg,4.jpg'/>" width="770" height="140" alt="<mango:Blog title />" title="<mango:Blog title />" />
 										<img src="<mango:Blog skinurl />assets/images/ico_twitter.png" alt="Follow Us on Twitter!" /></a></li>
 															<li><a href="http://www.facebook.com/site5" class="facebook" title="Join Us on Facebook!"><img src="<mango:Blog skinurl />assets/images/ico_facebook.png" alt="Join Us on Facebook!" /></a></li>

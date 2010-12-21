@@ -44,7 +44,7 @@
 	
 		<ul class="commentlist" id="comment_list">
 			<mango:Comments>		
-			<ol class="commentlist">
+			<ul class="commentlist">
 				<mango:Comment>
 					<li id="comment-<mango:CommentProperty id />" class="comment even thread-even depth-1">
 						<div class="c-grav"><mangox:Gravatar size="60" defaultimg="assets/images/no_gravatar.png" /></div>
@@ -60,14 +60,14 @@
 						</div>
 					</li>
 		  		</mango:Comment>
-	  		</ol>
+	  		</ul>
 		</mango:Comments>
 			
 			<mango:PostProperty ifcommentsallowed ifCommentCountLT="1">
 			<!-- If comments are open, but there are no comments. -->
 			<li class="comment">
 				<div class="entry">
-					<h2>There are no comments yet...Kick things off by filling out the form below.</h2>
+					<h2>Got anything to say? Go ahead and leave a comment!</h2>
 				</div>
 			</li>
 			</mango:PostProperty>
@@ -85,7 +85,8 @@
 		<p class="message"><mango:Message text /></p>
 	</mango:Message>
 	
-	<form method="post" action="#respond" id="commentform">
+	<form method="post" action="#respond" >
+		<div class="commentform">
 		<input type="hidden" name="action" value="addComment" />
 		<input type="hidden" name="comment_post_id" value="<mango:PostProperty id />" />
 		<input type="hidden" name="comment_parent" value="" />
@@ -116,10 +117,13 @@
 		
 		<p><label for="comment">Comment</label>
 		<textarea tabindex="4" rows="10" cols="100%" id="comment" name="comment_content"><mango:RequestVar name="comment_content" /></textarea></p>
-		
-		<p><input type="checkbox" id="subscribe" name="comment_subscribe" value="1" /> <label for="subscribe">Subscribe to this comment thread</label></p>
-		<p><mango:Event name="beforeCommentFormEnd" /></p>
-		<p><input name="submit" value="POST COMMENT" class="form_submit" type="submit" id="submit" src="<mango:Blog skinurl />assets/images/submit_comment.gif" value="Submit" /></p>
+		</div>
+						<p class="subscribe-to-comments">
+						<input type="checkbox" id="subscribe" name="comment_subscribe" value="1" /> 
+						<label for="subscribe">Notify me of followup comments via e-mail</label>
+						<mango:Event name="beforeCommentFormEnd" />
+						</p>
+		<p class="commentform"><input name="submit" value="POST COMMENT" class="form_submit" type="submit" id="submit" src="<mango:Blog skinurl />assets/images/submit_comment.gif" value="Submit" /></p>
 
 		</form>
 </mango:PostProperty>
