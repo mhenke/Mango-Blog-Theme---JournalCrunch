@@ -30,7 +30,7 @@
 			        	<p><label for="comment_email" class="comment-field"><small>Email  (it will not be displayed):</small></label><input class="text-input" type="text" name="comment_email" id="email" value="<mango:RequestVar name='comment_email' />" size="22" tabindex="2" /></p>
 			        	<p><label for="comment_website" class="comment-field"><small>Website:</small></label><input class="text-input" type="text" name="comment_website" id="url" value="<mango:RequestVar name='comment_website' />" size="22" tabindex="3" /></p>
 					</mango:AuthenticatedAuthor>
-
+						
 						<p>
 							<label class="comment-field" for="comment">
 								<small>Comment:</small>
@@ -38,6 +38,7 @@
 							<textarea class="text_input text_area" id="comment" name="comment_content" rows="7" cols="50"><mango:RequestVar name="comment_content" /></textarea>
 						</p>
 						</div>
+						<div>
 						<p class="subscribe-to-comments">
 						<input type="checkbox" id="subscribe" name="comment_subscribe" value="1" /> 
 						<label for="subscribe">Notify me of followup comments via e-mail</label>
@@ -49,3 +50,4 @@
 		    </form><!--end commentform-->
 		 </div><!--end respond-->
 		</mango:PageProperty>		
+ </div>

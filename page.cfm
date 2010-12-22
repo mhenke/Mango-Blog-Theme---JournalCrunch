@@ -21,41 +21,40 @@
 		<!-- End #header -->
 		<!-- Begin #content -->
 		<div style="position: relative;" id="content">
-
-<!-- Begin #colleft -->
+			<!-- Begin #colleft -->
 			<div id="colLeft">	
-		
-		<h1><mango:PageProperty title /></h1>
-		<p class="breadcrumb"><mangox:PageBreadcrumb /></p>
-			<div class="entry"><mango:PageProperty body /></div>
-			<div class="entry-footer entry">
-			<mango:Event name="beforePageContentEnd" template="page" mode="full" />
-			</div>
-			<p class="tagged"><mango:PageProperty ifcommentsallowed><a href="<mango:PageProperty link />#comments" title="Comment on <mango:PageProperty title />"><mango:PageProperty ifCommentCountGT="0"><mango:PageProperty commentCount /> Comment<mango:PageProperty ifCommentCountGT="1">s</mango:PageProperty></mango:PageProperty><mango:PageProperty ifCommentCountLT="1">No Comments</mango:PageProperty></a></mango:PageProperty></p>
-			<div class="clear"></div>
-
+			<h1><mango:PageProperty title /></h1>
+			<p class="breadcrumb"><mangox:PageBreadcrumb /></p>
+				<div class="entry"><mango:PageProperty body /></div>
+				<div class="entry-footer entry">
+				<mango:Event name="beforePageContentEnd" template="page" mode="full" />
+				</div>
+				<p class="tagged"><mango:PageProperty ifcommentsallowed><a href="<mango:PageProperty link />#comments" title="Comment on <mango:PageProperty title />"><mango:PageProperty ifCommentCountGT="0"><mango:PageProperty commentCount /> Comment<mango:PageProperty ifCommentCountGT="1">s</mango:PageProperty></mango:PageProperty><mango:PageProperty ifCommentCountLT="1">No Comments</mango:PageProperty></a></mango:PageProperty></p>
+				<div class="clear"></div>
 				<cfinclude template="comments.cfm" />
+
 			</div>
 			<!-- End #colLeft -->
-<!-- Begin #colRight -->
-	<div id="colRight">
-		<mangox:PodGroup locationId="sidebar-page" template="page">
-			<mangox:TemplatePod id="page-menu" title="Page Menu">
-			<template:pageMenu />
-			</mangox:TemplatePod>
-			<template:sidebar />
-		</mangox:PodGroup>
-	</div>
-	<!-- End #colRight -->	
-</div>
+			<!-- Begin #colRight -->
+			<div id="colRight">
+			<mangox:PodGroup locationId="sidebar-page" template="page">
+				<mangox:TemplatePod id="page-menu" title="Page Menu">
+				<template:pageMenu />
+				</mangox:TemplatePod>
+				<template:sidebar />
+			</mangox:PodGroup>
+			</div>
+			<!-- End #colRight -->	
+		</div>
 		<!-- End #content -->
 	</div>
 	<!-- End #wrapper -->
 	<!-- Begin #footer -->
 	<div id="footer">
-		<template:footer >
+		<mango:Event name="afterFooterStart" />
+			<cfinclude template="footer.cfm" />
+		<mango:Event name="beforeFooterEnd" />
 	</div>
-
 	<!-- End #footer -->
 </div>
 <!-- End #mainWrapper -->

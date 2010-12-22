@@ -41,27 +41,23 @@
 <h2 class="h2comments">
 	<mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty> <a class="addComment" href="#respond">+ Add Comment</a>
 </h2>
-	
-		<ul class="commentlist" id="comment_list">
-			<mango:Comments>		
 			<ul class="commentlist">
+			<mango:Comments>		
 				<mango:Comment>
-					<li id="comment-<mango:CommentProperty id />" class="comment even thread-even depth-1">
-						<div class="c-grav"><mangox:Gravatar size="60" defaultimg="assets/images/no_gravatar.png" /></div>
-						<div class="c-body">
-							<div class="c-head">
-								<mango:CommentProperty ifhasurl><a href='<mango:CommentProperty url />' rel='external nofollow'></mango:CommentProperty><mango:CommentProperty name /><mango:CommentProperty ifhasurl></a></mango:CommentProperty>
+					<li id="comment-<mango:CommentProperty id />" class="comment depth-1 clearfix">
+						<div><mangox:Gravatar size="38" class="avatar avatar-38 photo" defaultimg="assets/images/no_gravatar.png" /></div>
+						<div>
+							<div class="comment-meta commentmetadata clearfix">
+						    	<strong><mango:CommentProperty ifhasurl><a href='<mango:CommentProperty url />' rel='external nofollow'></mango:CommentProperty><mango:CommentProperty name /><mango:CommentProperty ifIsAuthor><span class="asterisk">*</span></mango:CommentProperty><mango:CommentProperty ifhasurl></a></mango:CommentProperty></strong> <span><mango:CommentProperty date dateformat="mmm d, yyyy" /> at <mango:CommentProperty time /></span>
 								<span class="c-permalink"><a href="#comment-<mango:CommentProperty id />" title="Permalink to this comment">PERMALINK</a></span>
-								<mango:CommentProperty ifIsAuthor><span class="asterisk">*</span></mango:CommentProperty>
 							</div>
-							<div class="c-date"><mango:CommentProperty date dateformat="mmm d, yyyy" /> at <mango:CommentProperty time /></div>
-							<p><mango:CommentProperty content /></p>
-							 <div class="reply"></div>
+							<div class="text"><p><mango:CommentProperty content /></p></div>
+							<div class="reply" class="comment-reply-link" rel="nofollow"></div>
 						</div>
 					</li>
 		  		</mango:Comment>
-	  		</ul>
-		</mango:Comments>
+			</mango:Comments>
+			</ul>
 			
 			<mango:PostProperty ifcommentsallowed ifCommentCountLT="1">
 			<!-- If comments are open, but there are no comments. -->

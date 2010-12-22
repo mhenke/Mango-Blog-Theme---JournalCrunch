@@ -2,7 +2,7 @@
 <cfimport prefix="mangox" taglib="../../tags/mangoextras">
 <cfimport prefix="template" taglib=".">
 <!-- Begin #logo -->
-			 <div id="logo"><a href="http://www.henke.ws/"><img src="<mango:Blog skinurl />assets/images/logo.gif" alt="JournalCrunch by Site5.com" /></a></div>
+			 <div id="logo"><a href="http://www.henke.ws/"><img src="<mango:Blog skinurl />assets/images/logo.gif" alt="Henke.WS" /></a></div>
 			<!-- End #logo -->
 			<!-- Begin #topMenu -->
 			<div id="topMenu" class="ddsmoothmenu">
@@ -33,25 +33,29 @@
 			<!-- Begin #topSearch -->
 
 			<div id="topSearch">
-				<form id="searchform" action="" method="get">
+				<!---<form id="searchform" action="" method="get">
 					<input type="text" id="s" name="s" value="" />
-				</form>
+				</form>--->
 			</div>
 			<!-- End #topSearch -->
 			<!-- BEGIN TOP SOCIAL LINKS -->
 			<div id="topSocial">
 				<ul>
-
 										<li><a href="http://www.twitter.com/mikehenke" class="twitter tip" title="Follow Me on Twitter!">
-										<img src="<mango:Blog skinurl />assets/images/header_<mangox:Random items='1.jpg,2.jpg,3.jpg,4.jpg'/>" width="770" height="140" alt="<mango:Blog title />" title="<mango:Blog title />" />
-										<img src="<mango:Blog skinurl />assets/images/ico_twitter.png" alt="Follow Us on Twitter!" /></a></li>
-															<li><a href="http://www.facebook.com/site5" class="facebook" title="Join Us on Facebook!"><img src="<mango:Blog skinurl />assets/images/ico_facebook.png" alt="Join Us on Facebook!" /></a></li>
+										<img src="<mango:Blog skinurl />assets/images/ico_social_twitter.png" alt="Follow Us on Twitter!" /></a></li>
+										<!---<li><a href="http://www.facebook.com/site5" class="facebook" title="Join Us on Facebook!"><img src="<mango:Blog skinurl />assets/images/ico_facebook.png" alt="Join Us on Facebook!" /></a></li>--->
 										<li class="rss">
 											<a href="<mango:Blog rssurl />" title="RSS" class="rss">
-												<img src="<mango:Blog skinurl />assets/images/ico_rss.png" alt="Subcribe to Our RSS Feed" />
+												<img src="<mango:Blog skinurl />assets/images/ico_social_rss.png" alt="Subcribe to Our RSS Feed" />
 											</a>
 										</li>
 				</ul>
 			</div>	
 			
 			<!-- END TOP SOCIAL LINKS -->
+			<!---
+			<div style="position:absolute;bottom:-10px; left:290px; z-index:100; width:350px; border:1px dotted #8B9DA3; padding:5px;background:#eee;-moz-border-radius:4px; -webkit-border-radius:4px;text-align:center; font-size:11px;">
+<a href="#" id="switcher">Switch to "Slider" View</a><br />
+<small><em style="color:#666">This switcher appears on this demo only. Set your view from  Theme Options.</em></small>
+			</div>
+			--->
