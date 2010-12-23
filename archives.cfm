@@ -32,7 +32,7 @@
 					<mango:ArchiveProperty ifIsType="search"><h2 class="archive_head">Search Results for <span class="green"><mango:ArchiveProperty title format="escapedHtml" /></span></h2></mango:ArchiveProperty>
 					<mango:ArchiveProperty ifIsType="author"><h2 class="archive_head">Entries by '<mango:ArchiveProperty title />'</h2></mango:ArchiveProperty>
 					<mango:ArchiveProperty ifIsType="unknown"><h2 class="archive_head">No archives</h2></mango:ArchiveProperty>
-								
+<cfscript>			
 						/**
 * Removes HTML from the string.
 * v2 - Mod by Steve Bryant to find trailing, half done HTML. 
@@ -89,6 +89,7 @@ function stripHTML(str) {
 	
 			<!-- Begin #colRight -->
 			<div id="colRight">
+			<cfinclude template="sidebar_mine.cfm" />
 				<mangox:PodGroup locationId="sidebar-page" template="page">
 					<mangox:TemplatePod id="page-menu" title="Page Menu">
 					<template:pageMenu />
@@ -115,6 +116,5 @@ function stripHTML(str) {
 <cfinclude template="twittertooltip.cfm" />
 
 </body>
-
 
 </html>

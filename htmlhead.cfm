@@ -7,23 +7,8 @@
 	<meta name="description" content="<mango:Blog description />" />
 	
 	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/nivo-slider.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/ddsmoothmenu.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/prettyPhoto.css" type="text/css" media="screen" />
 	
-	<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.form.js"></script>
-
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/cufon-yui.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/twittercb.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/ddsmoothmenu.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/custom.js"></script>
-
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/Vegur_400-Vegur_700.font.js"></script>
-<script type="text/javascript">
-	Cufon.replace('h1',{hover:true,textShadow: '#fff 1px 1px'})('h2:not(.footerTitle,.boxFooter .twitter)',{hover:true,textShadow: '#fff 1px 1px'})('h3',{textShadow: '#fff 1px 1px'})('.reply',{hover:true});
-</script>
+	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/ddsmoothmenu.css" type="text/css" media="screen" />
 
 
 <link rel='index' title='Henke' href='http://www.henke.ws' />

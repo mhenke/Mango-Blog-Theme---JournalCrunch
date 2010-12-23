@@ -122,8 +122,8 @@
 				</div>
 			</div>
 			
-			--->
 			<!-- End #featuredPosts -->
+			--->
 			<cfscript>
 /**
 * Removes HTML from the string.
@@ -185,6 +185,14 @@ function stripHTML(str) {
 
 <cfinclude template="twittertooltip.cfm" />
 
+<cfsavecontent variable="css">
+	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/prettyPhoto.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/nivo-slider.css" type="text/css" media="screen" />
+</cfsavecontent>
+
+<cfhtmlhead text="#css#" />
+
+<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.prettyPhoto.js"></script>
 </body>
 
 </html>

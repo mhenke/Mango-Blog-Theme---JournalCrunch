@@ -37,6 +37,7 @@
 			<!-- End #colLeft -->
 			<!-- Begin #colRight -->
 			<div id="colRight">
+			<cfinclude template="sidebar_mine.cfm" />
 			<mangox:PodGroup locationId="sidebar-page" template="page">
 				<mangox:TemplatePod id="page-menu" title="Page Menu">
 				<template:pageMenu />

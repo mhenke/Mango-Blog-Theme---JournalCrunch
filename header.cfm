@@ -2,7 +2,7 @@
 <cfimport prefix="mangox" taglib="../../tags/mangoextras">
 <cfimport prefix="template" taglib=".">
 <!-- Begin #logo -->
-			 <div id="logo"><a href="http://www.henke.ws/"><img src="<mango:Blog skinurl />assets/images/logo.gif" alt="Henke.WS" /></a></div>
+			 <div id="logo"><a href="http://www.henke.ws/"><img src="<mango:Blog skinurl />assets/images/logo.png" alt="Henke.WS" /></a></div>
 			<!-- End #logo -->
 			<!-- Begin #topMenu -->
 			<div id="topMenu" class="ddsmoothmenu">

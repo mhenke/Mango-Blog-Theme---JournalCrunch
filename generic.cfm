@@ -29,11 +29,11 @@
 		<h2><mango:Message title /></h2>
 		<div class="entry"><mango:Message text />
 		<mango:Message data /></div>
-		</div>
+		</div></div>
 			<!-- End #colLeft -->
 <!-- Begin #colRight -->
 	<div id="colRight">
-	
+	<cfinclude template="sidebar_mine.cfm" />
 		<mangox:PodGroup locationId="sidebar-page" template="page">
 	<mangox:TemplatePod id="page-menu" title="Page Menu">
 	<template:pageMenu />

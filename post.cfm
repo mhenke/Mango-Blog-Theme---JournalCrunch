@@ -73,7 +73,6 @@
 
 <mango:PostProperty ifcommentsallowed>
 	<!-- Comment Form -->
-	<h2 id="commentsForm">Got anything to say? Go ahead and leave a comment!</h2>
 	<mango:Message ifMessageExists type="comment" status="error">
 		<p class="error">There was a problem: <mango:Message text /></p>
 	</mango:Message>
@@ -133,6 +132,7 @@
 
 <!-- Begin #colRight -->
 	<div id="colRight">
+	<cfinclude template="sidebar_mine.cfm" />
 		<mangox:PodGroup locationId="sidebar-page" template="page">
 			<mangox:TemplatePod id="page-menu" title="Page Menu">
 			<template:pageMenu />
