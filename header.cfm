@@ -36,7 +36,14 @@
 				<!---<form id="searchform" action="" method="get">
 					<input type="text" id="s" name="s" value="" />
 				</form>--->
-			</div>
+				<form id="searchform" action="http://www.henke.ws/generic.cfm">
+    <input type="hidden" value="partner-pub-7473118221555976:stxm66f7ckw" name="cx">
+    <input type="hidden" value="FORID:11" name="cof">
+    <input type="hidden" value="ISO-8859-1" name="ie">
+    <input type="text" size="15" id="s" name="q">
+  </div>
+<input type="hidden" value="googlesearch-search" name="event">
+					<input type="hidden" value="event" name="action"></form>
 			<!-- End #topSearch -->
 			<!-- BEGIN TOP SOCIAL LINKS -->
 			<div id="topSocial">

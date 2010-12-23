@@ -24,7 +24,9 @@
 	<div class="boxFooter"><h2 class="footerTitle">About</h2>
 		<ul>
 			<li>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			I have worked with ColdFusion since 1999 for several companies. I am an advocate of Eclipse, Source Control, Mylyn, and anything to make developing ColdFusion more productive and easier.  My main focus currently is....
+			</li><li>
+			<a href="/author.cfm/admin">Visit the about section for more!</a>
 			</li>
 		</ul>
 	</div>		

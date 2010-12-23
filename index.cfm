@@ -52,6 +52,7 @@
 		
 		<!-- Begin #content -->
 		<div id="content" style="position:relative">
+			<!---
 			<!-- BEGIN SLIDER -->
 			<div id="sliderContainer" style="visibility: visible; height: auto;">
 			<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.nivo.slider.pack.js"></script>
@@ -95,36 +96,35 @@
 			  	</div>
 			  	<div style="width:940px; margin:0 auto 30px; background:url(<mango:Blog skinurl />assets/images/bk_shadow_slider.png) 0 -35px no-repeat; height:15px;"></div>
 			</div>
-			<!-- END SLIDER -->
 			
-			<!---
+			<!-- END SLIDER -->
+			--->
 			
 			<!-- Begin #featuredPosts -->
 			<div id="featuredPosts">
 				<div class="item ">
-				<h1><a href="http://wordpress.site5.net/journalcrunch/?p=39" title="Permanent Link to Pellentesque dapibus ullamcorper leo">Pellentesque dapibus ullamcorper leo</a></h1>
+				<h1><a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" title="Permanent Link to Mylyn - A Task-Oriented Approach to ColdFusion">Mylyn - A Task-Oriented Approach to ColdFusion</a></h1>
 			
-					<a href="http://wordpress.site5.net/journalcrunch/?p=39" title="Permanent Link to Pellentesque dapibus ullamcorper leo">
-						<img src="<mango:Blog skinurl />assets/images/timthumb.php?src=http://wordpress.site5.net/journalcrunch/wp-content/uploads/2010/11/sample8.jpg&h=290&w=430&zc=1" alt="Pellentesque dapibus ullamcorper leo" />
+					<a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" title="Permanent Link to Mylyn - A Task-Oriented Approach to ColdFusion">
+						<img height="290" width="430" src="http://farm5.static.flickr.com/4076/4899195337_189ef57393.jpg" alt="Pellentesque dapibus ullamcorper leo" />
 					</a>
-					<p>Te usu causae efficiendi. Nusquam percipitur cotidieque ut vis. An est vocent fabellas platonem, eu dico elitr feugait per. Et veri posse everti vix, te reque option corpora nam, vim audire molestiae necessitatibus ad. Quis soleat mei eu, tale epicurei [...]</p>
-					<a href="http://wordpress.site5.net/journalcrunch/?p=39" class="readMore">Read More</a>
+					<p>Most coding at its simplest is change a line here, add a file there, and move on to the next critical task. If you are like me, within a week I remember doing the task but not all the files details. If a similar task is given, I start over again.  Mylyn, a task-focused interface plugin for Eclipse, fixes this memory loss [...]</p>
+					<a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" class="readMore">Read More</a>
 				</div>
 				<div class="item lastItem">
 					<h1>
-					<a href="http://wordpress.site5.net/journalcrunch/?p=33" title="Permanent Link to Elcvne commune elaboraret his, mea amet luptatum">Elcvne commune elaboraret his, mea amet luptatum</a>
+					<a href="http://docs.google.com/View?id=dc2sb454_46hr5zqwgs" title="Permanent Link to Turbo Charging Eclipse">Turbo Charging Eclipse</a>
 					</h1>
-					<a href="http://wordpress.site5.net/journalcrunch/?p=33" title="Permanent Link to Elcvne commune elaboraret his, mea amet luptatum">
-					<img src="<mango:Blog skinurl />assets/images/timthumb.php?src=http://wordpress.site5.net/journalcrunch/wp-content/uploads/2010/11/sample9.jpg&h=290&w=430&zc=1" alt="Elcvne commune elaboraret his, mea amet luptatum" />
+					<a href="http://docs.google.com/View?id=dc2sb454_46hr5zqwgs" title="Permanent Link to Turbo Charging Eclipse">
+					<img  height="290" width="430" src="http://farm3.static.flickr.com/2734/4502249172_4752096281.jpg" alt="Elcvne commune elaboraret his, mea amet luptatum" />
 					</a>
-					<p>Elcvne commune elaboraret his, mea amet luptatum at. Modo aeterno propriae ius id. Viris definiebas reprehendunt ad eam. In mea melius commodo. Te usu causae efficiendi. Nusquam percipitur cotidieque ut vis. An est vocent fabellas platonem, eu dico elitr feugait [...]</p>
-					<a href="http://wordpress.site5.net/journalcrunch/?p=33" class="readMore">Read More</a>
+					<p>You made the leap to the Eclipse integrated development environment (IDE), and now you get the benefit of tight integration between the systems you use daily.  [...]</p>
+					<a href="http://docs.google.com/View?id=dc2sb454_46hr5zqwgs" class="readMore">Read More</a>
 				</div>
 			</div>
 			
 			<!-- End #featuredPosts -->
-			--->
-			<cfscript>
+<cfscript>
 /**
 * Removes HTML from the string.
 * v2 - Mod by Steve Bryant to find trailing, half done HTML. 

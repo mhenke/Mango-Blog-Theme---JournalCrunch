@@ -41,7 +41,7 @@
 <h2 class="h2comments">
 	<mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty> <a class="addComment" href="#respond">+ Add Comment</a>
 </h2>
-			<ul class="commentlist">
+			<ul id="commentlist" class="commentlist">
 			<mango:Comments>		
 				<mango:Comment>
 					<li id="comment-<mango:CommentProperty id />" class="comment depth-1 clearfix">
