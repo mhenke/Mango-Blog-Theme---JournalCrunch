@@ -23,24 +23,33 @@
 		<!-- Begin #content -->
 		<div style="position: relative;" id="content">
 
-<!-- Begin #colleft -->
+		<!-- Begin #colleft -->
 			<div id="colLeft">
 				
 				<div id="singlePost">
 					<h1><mango:PostProperty title /></h1>
 					<div class="meta">
-					 <mango:PostProperty date dateformat="mmmm d, yyyy" /> by <mango:Author><a href="<mango:AuthorProperty link />"><mango:PostProperty author /></a></mango:Author>&nbsp;&nbsp;&nbsp;<mango:PostProperty ifcommentsallowed><img alt="" src="<mango:Blog skinurl />assets/images/ico_post_comments.png"> <a title="Read Comments" href="#comment_list"><mango:PostProperty ifCommentCountGT="0" /><mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty><mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty></a>&nbsp;&nbsp;&nbsp;</mango:PostProperty><img alt="" src="<mango:Blog skinurl />/assets/images/ico_post_date.png"> Posted under:  <mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
+					 <mango:PostProperty date dateformat="mmmm d, yyyy" /> by <mango:Author><a href="<mango:AuthorProperty link />"><mango:PostProperty author /></a></mango:Author>&nbsp;&nbsp;&nbsp;
+					 <mango:PostProperty ifcommentsallowed><img alt="" src="<mango:Blog skinurl />assets/images/ico_post_comments.png"> 
+					 <a title="Read Comments" href="#comment_list">
+					 <mango:PostProperty ifCommentCountGT="0" >
+					 <mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty></mango:PostProperty>
+					 <mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty>
+					 </a>
+					 &nbsp;&nbsp;&nbsp;
+					 <img alt="" src="<mango:Blog skinurl />/assets/images/ico_post_date.png"> Posted under:  <mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
 					</div>
 					<mango:PostProperty body />
 					<div class="postTags">
 						<mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
 					</div>
 				</div>
-				
-<!-- You can start editing here. -->
-<h2 class="h2comments">
-	<mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty> <a class="addComment" href="#respond">+ Add Comment</a>
-</h2>
+			<mango:PostProperty ifcommentsallowed>
+			<!-- You can start editing here. -->
+			<h2 class="h2comments">
+				<mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty> <a class="addComment" href="#respond">+ Add Comment</a>
+			</h2>
+			
 			<ul id="commentlist" class="commentlist">
 			<mango:Comments>		
 				<mango:Comment>
@@ -59,7 +68,15 @@
 			</mango:Comments>
 			</ul>
 			
-			<mango:PostProperty ifcommentsallowed ifCommentCountLT="1">
+			<mango:PostProperty ifCommentCountLT="1">
+			<!-- If comments are open, but there are no comments. -->
+			<li class="comment">
+				<div class="entry">
+					<h2>Got anything to say? Be the First to leave a comment!</h2>
+				</div>
+			</li>
+			</mango:PostProperty>
+			<mango:PostProperty ifCommentCountGT="0">
 			<!-- If comments are open, but there are no comments. -->
 			<li class="comment">
 				<div class="entry">
@@ -71,7 +88,6 @@
 
 <div id="respond">
 
-<mango:PostProperty ifcommentsallowed>
 	<!-- Comment Form -->
 	<mango:Message ifMessageExists type="comment" status="error">
 		<p class="error">There was a problem: <mango:Message text /></p>
@@ -121,9 +137,10 @@
 		<p class="commentform"><input name="submit" value="POST COMMENT" class="form_submit" type="submit" id="submit" src="<mango:Blog skinurl />assets/images/submit_comment.gif" value="Submit" /></p>
 
 		</form>
+		</div>
 </mango:PostProperty>
 
-</div>
+
 
 					
 			</div>

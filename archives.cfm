@@ -24,7 +24,7 @@
 
 			<!-- Begin #colleft -->
 			<div id="colLeft">
-				<mango:Archive pageSize="10">
+				<mango:Archive pageSize="6">
 					<mango:ArchiveProperty ifIsType="category"><h2 class="archive_head">Entries Tagged as <span class="green"><mango:ArchiveProperty title /></span></h2></mango:ArchiveProperty>
 					<mango:ArchiveProperty ifIsType="month"><h2 class="archive_head">Entries for month: <span class="green"><mango:ArchiveProperty title dateformat="mmmm yyyy"  /></span></h2></mango:ArchiveProperty>
 					<mango:ArchiveProperty ifIsType="day"><h2 class="archive_head">Entries for day: <span class="green"><mango:ArchiveProperty title dateformat="dd mmmm yyyy" /></span></h2></mango:ArchiveProperty>

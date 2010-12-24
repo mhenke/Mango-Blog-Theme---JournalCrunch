@@ -59,7 +59,7 @@
 	</div>		
 	<!-- BEGIN COPYRIGHT -->
 	<div id="copyright">
-		© Copyright 2010 JournalCrunch by <a href="http://www.site5.com">Site5.com</a>. All Rights Reserved.  
+		&copy; Copyright 2010 JournalCrunch by <a href="http://www.site5.com">Site5.com</a>. All Rights Reserved.  
 			<div id="site5bottom"><a href="http://gk.site5.com/t/239">Site5.com | Experts in Web Hosting.</a></div>
 	</div>
 	<!-- END COPYRIGHT -->
@@ -72,9 +72,6 @@
 
 <script type="text/javascript" src="<mango:Blog skinurl />assets/js/cufon-yui.js"></script>
 <script type="text/javascript" src="<mango:Blog skinurl />assets/js/ddsmoothmenu.js"></script>
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/custom.js"></script>
-
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/Vegur_400-Vegur_700.font.js"></script>
 <script type="text/javascript">
 	Cufon.replace('h1',{hover:true,textShadow: '#fff 1px 1px'})('h2:not(.footerTitle,.boxFooter .twitter)',{hover:true,textShadow: '#fff 1px 1px'})('h3',{textShadow: '#fff 1px 1px'})('.reply',{hover:true});
 </script>

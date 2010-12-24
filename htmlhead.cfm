@@ -7,9 +7,6 @@
 	<meta name="description" content="<mango:Blog description />" />
 	
 	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/style.css" type="text/css" media="screen" />
-	
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/ddsmoothmenu.css" type="text/css" media="screen" />
-
 
 <link rel='index' title='Henke' href='http://www.henke.ws' />
 <meta name="generator" content="WordPress 3.0.1" />

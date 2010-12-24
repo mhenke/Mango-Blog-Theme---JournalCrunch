@@ -11,14 +11,14 @@
 					<mango:Pages parentPage="">
 					<mango:Page>
 						<li class="menu-item">
-							<a href="<mango:PageProperty link>" title="<mango:PageProperty title />">
+							<a href="<mango:PageProperty link>"">
 								<mango:PageProperty title />
 							</a>
 								<mango:Pages ifCountGT="0" count="1">
 									<ul class="sub-menu">
 								</mango:Pages>
 								<mango:Pages from="1"><mango:Page>
-							        <li class="menu-item"><a href="<mango:PageProperty link />" title="<mango:PageProperty title />"><mango:PageProperty title /></a></li>
+							        <li class="menu-item"><a href="<mango:PageProperty link />"><mango:PageProperty title /></a></li>
 								</mango:Page></mango:Pages>	
 								<mango:Pages ifCountGT="0" count="1">
 									</ul>
@@ -48,14 +48,9 @@
 			<!-- BEGIN TOP SOCIAL LINKS -->
 			<div id="topSocial">
 				<ul>
-										<li><a href="http://www.twitter.com/mikehenke" class="twitter tip" title="Follow Me on Twitter!">
-										<img src="<mango:Blog skinurl />assets/images/ico_social_twitter.png" alt="Follow Us on Twitter!" /></a></li>
-										<!---<li><a href="http://www.facebook.com/site5" class="facebook" title="Join Us on Facebook!"><img src="<mango:Blog skinurl />assets/images/ico_facebook.png" alt="Join Us on Facebook!" /></a></li>--->
-										<li class="rss">
-											<a href="<mango:Blog rssurl />" title="RSS" class="rss">
-												<img src="<mango:Blog skinurl />assets/images/ico_social_rss.png" alt="Subcribe to Our RSS Feed" />
-											</a>
-										</li>
+										<li><a href="http://www.twitter.com/mikehenke"  class="twitter" title="Follow Me on Twitter!"><img src="<mango:Blog skinurl />assets/images/ico_social_twitter.png" alt="Follow Me on Twitter!" /></a></li>
+										<li><a href="<mango:Blog basePath />page.cfm/contact-me" class="facebook" title="Email Me!"><img src="<mango:Blog skinurl />assets/images/ico_social_facebook.png" alt="Email Me!" /></a></li>
+										<li class="rss"><a href="<mango:Blog rssurl />" title="Follow Me On RSS!" class="rss"><img src="<mango:Blog skinurl />assets/images/ico_social_rss.png" alt="Subcribe to Our RSS Feed" /></a></li>
 				</ul>
 			</div>	
 			

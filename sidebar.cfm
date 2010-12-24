@@ -65,7 +65,7 @@
 
 	<!--- category cloud --->
 	<mangox:TemplatePod id="category-cloud" title="Tag Cloud">
-		<mangox:CategoryCloud includeStyle="false" />
+		<div><mangox:CategoryCloud includeStyle="false" /></div>
 	</mangox:TemplatePod>
 	
 	<!--- all archives by month --->
@@ -106,10 +106,11 @@
 				<ul><li class="widget">
 					<h2 class="widgettitle"><mangox:PodProperty title /></h2>
 						<mangox:PodProperty content />
-					</li></ul>
+					</li>
+				</ul>
 				</mangox:PodProperty>
-			</mangox:Pod>
-			<mangox:Pod><!--- output the content as is, good for "templatePods" --->
+			
+				<!--- output the content as is, good for "templatePods" --->
 				<mangox:PodProperty ifNotHasTitle>
 					<mangox:PodProperty content />
 				</mangox:PodProperty>

@@ -106,7 +106,7 @@
 				<h1><a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" title="Permanent Link to Mylyn - A Task-Oriented Approach to ColdFusion">Mylyn - A Task-Oriented Approach to ColdFusion</a></h1>
 			
 					<a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" title="Permanent Link to Mylyn - A Task-Oriented Approach to ColdFusion">
-						<img height="290" width="430" src="http://farm5.static.flickr.com/4076/4899195337_189ef57393.jpg" alt="Pellentesque dapibus ullamcorper leo" />
+						<img height="290" width="430" src="http://farm5.static.flickr.com/4076/4899195337_189ef57393.jpg" alt="Mylyn - A Task-Oriented Approach to ColdFusion" />
 					</a>
 					<p>Most coding at its simplest is change a line here, add a file there, and move on to the next critical task. If you are like me, within a week I remember doing the task but not all the files details. If a similar task is given, I start over again.  Mylyn, a task-focused interface plugin for Eclipse, fixes this memory loss [...]</p>
 					<a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" class="readMore">Read More</a>
@@ -116,7 +116,7 @@
 					<a href="http://docs.google.com/View?id=dc2sb454_46hr5zqwgs" title="Permanent Link to Turbo Charging Eclipse">Turbo Charging Eclipse</a>
 					</h1>
 					<a href="http://docs.google.com/View?id=dc2sb454_46hr5zqwgs" title="Permanent Link to Turbo Charging Eclipse">
-					<img  height="290" width="430" src="http://farm3.static.flickr.com/2734/4502249172_4752096281.jpg" alt="Elcvne commune elaboraret his, mea amet luptatum" />
+					<img  height="290" width="430" src="http://farm3.static.flickr.com/2734/4502249172_4752096281.jpg" alt="Turbo Charging Eclipse" />
 					</a>
 					<p>You made the leap to the Eclipse integrated development environment (IDE), and now you get the benefit of tight integration between the systems you use daily.  [...]</p>
 					<a href="http://docs.google.com/View?id=dc2sb454_46hr5zqwgs" class="readMore">Read More</a>
@@ -148,7 +148,7 @@ function stripHTML(str) {
 }
 </cfscript>
 			
-			<mango:Posts count="9">
+			<mango:Posts count="6">
 				<mango:Post>
 				<cfsavecontent variable="body_count"><mango:PostProperty body /></cfsavecontent>
 				<cfset body_count = stripHTML(body_count) />
