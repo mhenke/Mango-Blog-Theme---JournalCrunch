@@ -36,10 +36,15 @@
 					 <mango:PostProperty commentCount /> Comment<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty></mango:PostProperty>
 					 <mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty>
 					 </a>
-					 &nbsp;&nbsp;&nbsp;
+					<br>
 					 <img alt="" src="<mango:Blog skinurl />/assets/images/ico_post_date.png"> Posted under:  <mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
 					</div>
-					<mango:PostProperty body />
+					<div>
+						<a href="http://wr.readspeaker.com/webreader/webreader.php?cid=f362ba77ff2a4f3a3ac2ff665e2eec31&amp;t=blog_free&amp;title=readspeaker&amp;url=" onclick="readpage(this.href+escape(document.location.href),1); return false;">
+						<img src="http://media.readspeaker.com/images/webreader/listen_en_us.gif" style="border-style: none;"  title="" alt="" /></a>
+						<div id="WR_1"></div>
+					</div>
+					<!-- RSPEAK_START --><mango:PostProperty body /><!-- RSPEAK_STOP -->
 					<div class="postTags">
 						<mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
 					</div>

@@ -17,3 +17,5 @@
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<mango:Blog rssurl />" />
 	<link rel="alternate" type="application/atom+xml" title="Atom" href="<mango:Blog atomurl />" />	
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<mango:Blog apiurl />" />
+	
+	<script language="javascript" type="text/javascript" src="http://wr.readspeaker.com/webreader/webreader.js.php?cid=f362ba77ff2a4f3a3ac2ff665e2eec31"></script>

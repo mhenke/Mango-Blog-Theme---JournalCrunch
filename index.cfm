@@ -108,7 +108,7 @@
 					<a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" title="Permanent Link to Mylyn - A Task-Oriented Approach to ColdFusion">
 						<img height="290" width="430" src="http://farm5.static.flickr.com/4076/4899195337_189ef57393.jpg" alt="Mylyn - A Task-Oriented Approach to ColdFusion" />
 					</a>
-					<p>Most coding at its simplest is change a line here, add a file there, and move on to the next critical task. If you are like me, within a week I remember doing the task but not all the files details. If a similar task is given, I start over again.  Mylyn, a task-focused interface plugin for Eclipse, fixes this memory loss [...]</p>
+					<p>Most coding at its simplest is change a line here, add a file there, and move on to the next critical task. If you are like me, within a week I remember doing the task but not all the files details. If a similar task is given, I start over again.  Mylyn, a task-focused interface plugin for Eclipse, fixes this memory loss <a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" title="Permanent Link to Mylyn - A Task-Oriented Approach to ColdFusion">[...]</a></p>
 					<a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" class="readMore">Read More</a>
 				</div>
 				<div class="item lastItem">
@@ -118,7 +118,7 @@
 					<a href="http://docs.google.com/View?id=dc2sb454_46hr5zqwgs" title="Permanent Link to Turbo Charging Eclipse">
 					<img  height="290" width="430" src="http://farm3.static.flickr.com/2734/4502249172_4752096281.jpg" alt="Turbo Charging Eclipse" />
 					</a>
-					<p>You made the leap to the Eclipse integrated development environment (IDE), and now you get the benefit of tight integration between the systems you use daily.  [...]</p>
+					<p>You made the leap to the Eclipse integrated development environment (IDE), and now you get the benefit of tight integration between the systems you use daily. <a href="http://docs.google.com/View?id=dc2sb454_31g2p9gdct" title="Permanent Link to Mylyn - A Task-Oriented Approach to ColdFusion">[...]</a>/p>
 					<a href="http://docs.google.com/View?id=dc2sb454_46hr5zqwgs" class="readMore">Read More</a>
 				</div>
 			</div>
@@ -155,7 +155,7 @@ function stripHTML(str) {
 				<cfsavecontent variable="title_count"><mango:PostProperty title /></cfsavecontent>
 					<div class="postBox <mango:Post ifCurrentIsThird>lastBox</mango:Post> <mango:Post ifCurrentIsLast>lastBox</mango:Post>">
 						<div class="postBoxInner">
-							<img src="<mango:Blog skinurl />assets/images/nothumb.jpg"  alt="No Thumbnail"/>					
+							<a href="<mango:PostProperty link />" rel="bookmark" title="Permanent Link to <mango:PostProperty title />"><img src="<mango:Blog skinurl />assets/images/nothumb.jpg"  alt="No Thumbnail"/></a>				
 							<h2><a href="<mango:PostProperty link />" rel="bookmark" title="Permanent Link to <mango:PostProperty title />"><cfoutput>#left(title_count,25)#<cfif len(title_count) GT 25>...</cfif></cfoutput></a></h2>
 							<div class="excerpt">
 								<cfoutput>#left(body_count,125)#</cfoutput>
@@ -186,13 +186,12 @@ function stripHTML(str) {
 <cfinclude template="twittertooltip.cfm" />
 
 <cfsavecontent variable="css">
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/prettyPhoto.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/nivo-slider.css" type="text/css" media="screen" />
+	<!---<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/prettyPhoto.css" type="text/css" media="screen" />--->
 </cfsavecontent>
 
 <cfhtmlhead text="#css#" />
 
-<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.prettyPhoto.js"></script>
+<!---<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.prettyPhoto.js"></script>--->
 </body>
 
 </html>
