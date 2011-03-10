@@ -4,11 +4,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
-	<mango:Author>
+<mango:Page>
 	<mango:Event name="beforeHtmlHeadEnd" />
 	<template:htmlhead />
 	<mango:Event name="beforeHtmlHeadEnd" />
-</head>
 <body>
 <mango:Event name="beforeHtmlBodyStart" />
 <!-- Begin #mainWrapper -->
@@ -17,61 +16,58 @@
 	<div id="wrapper">
 		<!-- Begin #header -->
 		<div id="header">
-		<template:header/>
+			<template:header/>
 		</div>
 		<!-- End #header -->
 		<!-- Begin #content -->
 		<div style="position: relative;" id="content">
+			<!-- Begin #colleft -->
+			<div id="colLeft">	
+			<h1><mango:PageProperty title /></h1>
+			<p class="breadcrumb"><mangox:PageBreadcrumb /></p>
+				<div class="entry"><mango:PageProperty body /></div>
+				<div class="entry-footer entry">
+				
+				<hr> 
+				<template:qr-index />
+				<mango:Event name="beforePageContentEnd" template="page" mode="full" />
+				</div>
+				<p class="tagged"><mango:PageProperty ifcommentsallowed><a href="<mango:PageProperty link />#comments" title="Comment on <mango:PageProperty title />"><mango:PageProperty ifCommentCountGT="0"><mango:PageProperty commentCount /> Comment<mango:PageProperty ifCommentCountGT="1">s</mango:PageProperty></mango:PageProperty><mango:PageProperty ifCommentCountLT="1">No Comments</mango:PageProperty></a></mango:PageProperty></p>
+				<div class="clear"></div>
+				
+				<template:comments />
 
-<!-- Begin #colleft -->
-			<div id="colLeft">
-			<h2>About <mango:AuthorProperty name /></h2>
-			<div class="entry">
-			<mango:AuthorProperty description />
-			
-			<h3>Recent entries by <mango:AuthorProperty name /></h3>
-			<ul>
-			<mango:Posts count="10">
-				<mango:Post>
-					<li><a href="<mango:PostProperty link />"><mango:PostProperty title /></a></li>
-				</mango:Post>
-				</mango:Posts>
-			</ul>
-			</div>
 			</div>
 			<!-- End #colLeft -->
-<!-- Begin #colRight -->
-	<div id="colRight">
+			<!-- Begin #colRight -->
+			<div id="colRight">
 			<mangox:PodGroup locationId="sidebar-page" template="page">
-	<mangox:TemplatePod id="page-menu" title="Page Menu">
-	<template:pageMenu />
-	</mangox:TemplatePod>
-	<template:sidebar />
-</mangox:PodGroup>
-		
-	</div>
-	
-<!-- End #colRight -->	
-</div>
+				<mangox:TemplatePod id="page-menu" title="Page Menu">
+				<template:pageMenu />
+				</mangox:TemplatePod>
+				<template:sidebar />
+			</mangox:PodGroup>
+			</div>
+			<!-- End #colRight -->	
+		</div>
 		<!-- End #content -->
 	</div>
 	<!-- End #wrapper -->
 	<!-- Begin #footer -->
 	<div id="footer">
 		<mango:Event name="afterFooterStart" />
-				<template:footer />
+			<template:footer />
 		<mango:Event name="beforeFooterEnd" />
 	</div>
-
 	<!-- End #footer -->
 </div>
 <!-- End #mainWrapper -->
 <script type="text/javascript">Cufon.now(); </script>
 
-<cfinclude template="twittertooltip.cfm" />
+	<template:twittertooltip />
 
 <mango:Event name="beforeHtmlBodyEnd" />
-</mango:Author>
+</mango:Page>
 </body>
 
 

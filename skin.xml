@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<skin id="JournalCrunch" name="JournalCrunch" version="1.0" provider-name="AsFusion" lastModified="2009-09-08">
+<skin id="JournalCrunch" name="JournalCrunch" version="1.0" provider-name="Paulisystems" lastModified="2011-02-06">
 	<description>Design based on JournalCrunch by Chris Pearson</description>
 	<url></url>
-	<author>AsFusion</author>
-	<authorUrl>http://www.asfusion.com</authorUrl>
+	<author>Mike Henke, Birgit Pauli-Haack</author>
+	<authorUrl></authorUrl>
 	<designAuthor>Chris Pearson</designAuthor>
-	<designAuthorUrl>http://JournalCrunch.tubetorial.com</designAuthorUrl>
-	<thumbnail>assets/images/skin_thumbnail.png</thumbnail>
-	<preview>http://www.mangoblog.org/themes/preview/JournalCrunch</preview>
-	<requiresVersion match="greaterOrEqual">1.4</requiresVersion>
+	<designAuthorUrl></designAuthorUrl>
+	<thumbnail>assets/images/theme-preview-300.jpg</thumbnail>
+	<preview></preview>
+	<requiresVersion match="greaterOrEqual">1.6</requiresVersion>
 	<adminEditorCss>assets/css/adminEditor.css</adminEditorCss>
 	<license>Creative Commons Attribution-ShareAlike 2.5</license>
 	<pageTemplates>
 		<template file="archives_index.cfm" name="Archives Listing Page" />
+		<template file="page-qrform.cfm" name="Page with QR Form"/>
 	</pageTemplates>
 	<adminPageTemplates>
 		<template id="login" file="login.cfm" />
@@ -27,6 +28,7 @@
 			<pod id="category-cloud">Tag Cloud</pod>
 			<pod id="monthly-archives">Archives (monthly)</pod>
 			<pod id="links-by-category">Links by category</pod>
+			<pod id="cf-mike-mine">Mike's Sidebar</pod>
 		</location>
 		<location id="sidebar-page" name="Page Sidebar">
 			<pod id="page-menu">Page Navigation</pod>

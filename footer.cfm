@@ -1,6 +1,7 @@
 <cfimport prefix="mango" taglib="../../tags/mango">
 <cfimport prefix="mangox" taglib="../../tags/mangoextras">
 <cfimport prefix="template" taglib=".">
+<cfif thisTag.executionmode is 'start'>
 <div id="footerInner">
 	<div class="boxFooter">		
 	<h2 class="footerTitle">Recent Comments</h2>		
@@ -12,14 +13,19 @@
 	</mango:Comments>
 </ul>
 	</div>
-	<div class="boxFooter"><h2 class="footerTitle">About</h2>
+	<div class="boxFooter">
+		<h2 class="footerTitle">On MangoBlog</h2>
+		
 		<ul>
+			<mango:Posts categoryName="MangoBlog" count="3">
+			<mango:post>
 			<li>
-			I have worked with ColdFusion since 1999 for several companies. I am an advocate of Eclipse, Source Control, Mylyn, and anything to make developing ColdFusion more productive and easier.  My main focus currently is....
-			</li><li>
-			<a href="/author.cfm/admin">Visit the about section for more!</a>
-			</li>
+			<a href="<mangoPostProperty permalink>"><mango:PostProperty title></a></li>
+			<li>
+			</mango:post>
+			</mango:Posts>
 		</ul>
+
 	</div>		
 	<div class="boxFooter">		
 		<h2 class="footerTitle">Recent Posts</h2>		
@@ -48,7 +54,7 @@
 			</mango:Pages>
 		</ul>
 	</div>		
-	<!-- BEGIN COPYRIGHT -->
+	<!-- BEGIN COPYRIGHT --
 	<div id="copyright">
 		&copy; Copyright 2010 JournalCrunch by <a href="http://www.site5.com">Site5.com</a>. All Rights Reserved.  
 			<div id="site5bottom"><a href="http://gk.site5.com/t/239">Site5.com | Experts in Web Hosting.</a></div>
@@ -61,16 +67,4 @@
 		Cufon.replace('h1',{hover:true,textShadow: '#fff 1px 1px'})('h2:not(.footerTitle,.boxFooter .twitter)',{hover:true,textShadow: '#fff 1px 1px'})('h3',{textShadow: '#fff 1px 1px'})('.reply',{hover:true});
 	</script>
 	
-	<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1842929-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+</cfif>	

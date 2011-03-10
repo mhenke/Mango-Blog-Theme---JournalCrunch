@@ -6,7 +6,7 @@
 <head profile="http://gmpg.org/xfn/11">
 <mango:Post>
 	<mango:Event name="beforeHtmlHeadEnd" />
-	<cfinclude template="htmlhead.cfm" />
+	<template:htmlhead />
 	<mango:Event name="beforeHtmlHeadEnd" />
 </head>
 <body>
@@ -17,7 +17,7 @@
 	<div id="wrapper">
 		<!-- Begin #header -->
 		<div id="header">
-			<cfinclude template="header.cfm" />
+			<template:header />
 		</div>
 		<!-- End #header -->
 		<!-- Begin #content -->
@@ -37,14 +37,10 @@
 					 <mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty>
 					 </a>
 					<br>
-					 <img alt="" src="<mango:Blog skinurl />/assets/images/ico_post_date.png"> Posted under:  <mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
+					 <a href="<mango:Blog url />admin/post.cfm?id=<mango:PostProperty id/>" title="Edit Post">
+					 <img alt="" src="<mango:Blog skinurl />/assets/images/ico_post_date.png" alt="Edit Post"></a> Posted under:  <mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
 					</div>
-					<div>
-						<a href="http://wr.readspeaker.com/webreader/webreader.php?cid=f362ba77ff2a4f3a3ac2ff665e2eec31&amp;t=blog_free&amp;title=readspeaker&amp;url=" onclick="readpage(this.href+escape(document.location.href),1); return false;">
-						<img src="http://media.readspeaker.com/images/webreader/listen_en_us.gif" style="border-style: none;"  title="" alt="" /></a>
-						<div id="WR_1"></div>
-					</div>
-					<!-- RSPEAK_START --><mango:PostProperty body /><!-- RSPEAK_STOP -->
+					<mango:PostProperty body />
 					<div class="postTags">
 						<mango:Categories><mango:Category><a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a> <mango:Category ifCurrentIsNotLast>&middot; </mango:Category></mango:Category></mango:Categories>
 					</div>
@@ -154,7 +150,6 @@
 
 <!-- Begin #colRight -->
 	<div id="colRight">
-	<cfinclude template="sidebar_mine.cfm" />
 		<mangox:PodGroup locationId="sidebar-page" template="page">
 			<mangox:TemplatePod id="page-menu" title="Page Menu">
 			<template:pageMenu />
@@ -171,7 +166,7 @@
 	<!-- Begin #footer -->
 	<div id="footer">
 		<mango:Event name="afterFooterStart" />
-			<cfinclude template="footer.cfm" />
+			<template:footer />
 		<mango:Event name="beforeFooterEnd" />
 	</div>
 	<!-- End #footer -->
@@ -179,7 +174,7 @@
 <!-- End #mainWrapper -->
 <script type="text/javascript">Cufon.now(); </script>
 
-<cfinclude template="twittertooltip.cfm" />
+<template:twittertooltip />
 
 </body>
 

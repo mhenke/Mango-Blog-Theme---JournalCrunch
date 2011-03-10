@@ -1,8 +1,16 @@
 <cfimport prefix="mango" taglib="../../tags/mango">
 <cfimport prefix="mangox" taglib="../../tags/mangoextras">
 <cfimport prefix="template" taglib=".">
+<cfif thisTag.executionmode is "start">
 <!-- Begin #logo -->
-			 <div id="logo"><a href="http://www.henke.ws/"><img src="<mango:Blog skinurl />assets/images/logo.png" alt="Henke.WS" /></a></div>
+			 <div id="logo">
+				 
+				 <h1><a href="<mango:Blog url/>"><mango:Blog title></a></h1>
+				 <mango:Blog tagline>
+				 
+				<!--- 	 <img src="<mango:Blog skinurl />assets/images/logo.png" alt="Henke.WS" /> --->
+				</a>
+			</div>
 			<!-- End #logo -->
 			<!-- Begin #topMenu -->
 			<div id="topMenu" class="ddsmoothmenu">
@@ -33,14 +41,13 @@
 			<!-- Begin #topSearch -->
 
 			<div id="topSearch">
-				<!---<form id="searchform" action="" method="get">
-					<input type="text" id="s" name="s" value="" />
-				</form>--->
-				<form id="searchform" action="http://www.henke.ws/generic.cfm">
-    <input type="hidden" value="partner-pub-7473118221555976:stxm66f7ckw" name="cx">
-    <input type="hidden" value="FORID:11" name="cof">
-    <input type="hidden" value="ISO-8859-1" name="ie">
-    <input type="text" size="15" id="s" name="q">
+				
+				<form id="search_form" method="get" action="<mango:Blog searchUrl />">
+		<div>
+			<input type="text" class="search_input" name="term" value="type and press enter" id="term" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" />
+			<input type="hidden" id="searchsubmit" value="Search" />
+		</div>
+		</form>
   </div>
 <input type="hidden" value="googlesearch-search" name="event">
 					<input type="hidden" value="event" name="action"></form>
@@ -48,16 +55,11 @@
 			<!-- BEGIN TOP SOCIAL LINKS -->
 			<div id="topSocial">
 				<ul>
-										<li><a href="http://www.twitter.com/mikehenke"  class="twitter" title="Follow Me on Twitter!"><img src="<mango:Blog skinurl />assets/images/ico_social_twitter.png" alt="Follow Me on Twitter!" /></a></li>
-										<li><a href="<mango:Blog basePath />page.cfm/contact-me" class="facebook" title="Email Me!"><img src="<mango:Blog skinurl />assets/images/ico_social_facebook.png" alt="Email Me!" /></a></li>
-										<li class="rss"><a href="<mango:Blog rssurl />" title="Follow Me On RSS!" class="rss"><img src="<mango:Blog skinurl />assets/images/ico_social_rss.png" alt="Subcribe to Our RSS Feed" /></a></li>
+					<li><a href="http://www.twitter.com/bph"  class="twitter" title="Follow Me on Twitter!"><img src="<mango:Blog skinurl />assets/images/ico_social_twitter.png" alt="Follow Me on Twitter!" /></a></li>
+					<li><a href="<mango:Blog basePath />page.cfm/contact-me" class="facebook" title="Email Me!"><img src="<mango:Blog skinurl />assets/images/ico_social_facebook.png" alt="Email Me!" /></a></li>
+					<li class="rss"><a href="<mango:Blog rssurl />" title="Follow Me On RSS!" class="rss"><img src="<mango:Blog skinurl />assets/images/ico_social_rss.png" alt="Subcribe to Our RSS Feed" /></a></li>
 				</ul>
 			</div>	
 			
 			<!-- END TOP SOCIAL LINKS -->
-			<!---
-			<div style="position:absolute;bottom:-10px; left:290px; z-index:100; width:350px; border:1px dotted #8B9DA3; padding:5px;background:#eee;-moz-border-radius:4px; -webkit-border-radius:4px;text-align:center; font-size:11px;">
-<a href="#" id="switcher">Switch to "Slider" View</a><br />
-<small><em style="color:#666">This switcher appears on this demo only. Set your view from  Theme Options.</em></small>
-			</div>
-			--->
+</cfif>

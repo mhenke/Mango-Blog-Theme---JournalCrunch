@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 	<mango:Event name="beforeHtmlHeadEnd" />
-	<cfinclude template="htmlhead.cfm" />
+	<template:htmlhead />
 	<mango:Event name="beforeHtmlHeadEnd" />
 </head>
 <body>
@@ -16,7 +16,7 @@
 	<div id="wrapper">
 		<!-- Begin #header -->
 		<div id="header">
-		<cfinclude template="header.cfm" />
+		<template:header/>
 		</div>
 		<!-- End #header -->
 		<!-- Begin #content -->
@@ -56,7 +56,7 @@ function stripHTML(str) {
 }
 </cfscript>		
 									
-					<div>
+				<div>
 			<mango:Posts count="0">
 				<mango:Post>
 				<cfsavecontent variable="body_count"><mango:PostProperty body /></cfsavecontent>
@@ -64,7 +64,7 @@ function stripHTML(str) {
 				<cfsavecontent variable="title_count"><mango:PostProperty title /></cfsavecontent>
 					<div class="postBox <mango:Post ifCurrentIsEven>lastBox</mango:Post> <mango:Post ifCurrentIsLast>lastBox</mango:Post>">
 						<div class="postBoxInner">
-							<img src="<mango:Blog skinurl />assets/images/nothumb.jpg"  alt="No Thumbnail"/>					
+							<!--- <img src="<mango:Blog skinurl />assets/images/nothumb.jpg"  alt="No Thumbnail"/>					 --->
 							<h2><a href="<mango:PostProperty link />" rel="bookmark" title="Permanent Link to <mango:PostProperty title />"><cfoutput>#left(title_count,25)#<cfif len(title_count) GT 25>...</cfif></cfoutput></a></h2>
 							<div class="excerpt">
 								<cfoutput>#left(body_count,125)#</cfoutput>
@@ -89,7 +89,6 @@ function stripHTML(str) {
 	
 			<!-- Begin #colRight -->
 			<div id="colRight">
-			<cfinclude template="sidebar_mine.cfm" />
 				<mangox:PodGroup locationId="sidebar-page" template="page">
 					<mangox:TemplatePod id="page-menu" title="Page Menu">
 					<template:pageMenu />
@@ -105,7 +104,7 @@ function stripHTML(str) {
 	<!-- Begin #footer -->
 	<div id="footer">
 		<mango:Event name="afterFooterStart" />
-			<cfinclude template="footer.cfm" />
+			<template:footer />
 		<mango:Event name="beforeFooterEnd" />
 	</div>
 	<!-- End #footer -->

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 <mango:Event name="beforeHtmlHeadEnd" />
-	<cfinclude template="htmlhead.cfm" />
+	<template:htmlhead />
 	<mango:Event name="beforeHtmlHeadEnd" />
 </head>
 <body>
@@ -16,7 +16,7 @@
 	<div id="wrapper">
 		<!-- Begin #header -->
 		<div id="header">
-		<cfinclude template="header.cfm" />
+		<template:header/>
 		</div>
 		<!-- End #header -->
 		<!-- Begin #content -->
@@ -37,7 +37,7 @@
 			<!-- End #colLeft -->
 <!-- Begin #colRight -->
 	<div id="colRight">
-	<cfinclude template="sidebar_mine.cfm" />
+	 
 		<mangox:PodGroup locationId="sidebar-page" template="page">
 	<mangox:TemplatePod id="page-menu" title="Page Menu">
 	<template:pageMenu />
@@ -55,7 +55,7 @@
 	<!-- Begin #footer -->
 	<div id="footer">
 		<mango:Event name="afterFooterStart" />
-			<cfinclude template="footer.cfm" />
+				<template:footer />
 		<mango:Event name="beforeFooterEnd" />
 	</div>
 

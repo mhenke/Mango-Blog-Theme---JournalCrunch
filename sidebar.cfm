@@ -97,6 +97,13 @@
 		</ul>
 	</mangox:TemplatePod>
 	
+	<mangox:TemplatePod id="cf-mike-mine">
+		<ul>
+		<template:sidebar_mine/>
+		</ul>
+	</mangox:TemplatePod>
+	
+	
 	<!--- output all the pods, including the ones added by plugins --->
 	<mangox:Pods>
 		<div class="rightBox">

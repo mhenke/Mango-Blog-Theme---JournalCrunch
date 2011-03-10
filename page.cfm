@@ -6,7 +6,7 @@
 <head profile="http://gmpg.org/xfn/11">
 <mango:Page>
 	<mango:Event name="beforeHtmlHeadEnd" />
-	<cfinclude template="htmlhead.cfm" />
+	<template:htmlhead />
 	<mango:Event name="beforeHtmlHeadEnd" />
 <body>
 <mango:Event name="beforeHtmlBodyStart" />
@@ -16,7 +16,7 @@
 	<div id="wrapper">
 		<!-- Begin #header -->
 		<div id="header">
-			<cfinclude template="header.cfm" />
+			<template:header/>
 		</div>
 		<!-- End #header -->
 		<!-- Begin #content -->
@@ -32,13 +32,12 @@
 				<p class="tagged"><mango:PageProperty ifcommentsallowed><a href="<mango:PageProperty link />#comments" title="Comment on <mango:PageProperty title />"><mango:PageProperty ifCommentCountGT="0"><mango:PageProperty commentCount /> Comment<mango:PageProperty ifCommentCountGT="1">s</mango:PageProperty></mango:PageProperty><mango:PageProperty ifCommentCountLT="1">No Comments</mango:PageProperty></a></mango:PageProperty></p>
 				<div class="clear"></div>
 				
-				<cfinclude template="comments.cfm" />
+				<template:comments />
 
 			</div>
 			<!-- End #colLeft -->
 			<!-- Begin #colRight -->
 			<div id="colRight">
-			<cfinclude template="sidebar_mine.cfm" />
 			<mangox:PodGroup locationId="sidebar-page" template="page">
 				<mangox:TemplatePod id="page-menu" title="Page Menu">
 				<template:pageMenu />
@@ -54,7 +53,7 @@
 	<!-- Begin #footer -->
 	<div id="footer">
 		<mango:Event name="afterFooterStart" />
-			<cfinclude template="footer.cfm" />
+			<template:footer />
 		<mango:Event name="beforeFooterEnd" />
 	</div>
 	<!-- End #footer -->
@@ -62,7 +61,7 @@
 <!-- End #mainWrapper -->
 <script type="text/javascript">Cufon.now(); </script>
 
-<cfinclude template="twittertooltip.cfm" />
+	<template:twittertooltip />
 
 <mango:Event name="beforeHtmlBodyEnd" />
 </mango:Page>
