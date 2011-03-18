@@ -17,88 +17,11 @@
 		<!-- Begin #header -->
 		<div id="header">
 			<cfinclude template="header.cfm" />
-			<script type="text/javascript">
-			//$(document).ready(function(){
-			$('#switcher').click(function(){
-				   //$('#sliderContainer').toggle();
-				   var flag = $('#sliderContainer').css('visibility');
-				   if(flag != "visible") {
-						   var cssObj = {
-								  'visibility' : 'visible',
-								  'height' : 'auto'
-								  }
-					  }else{
-						   var cssObj = {
-								  'visibility' : 'hidden',
-								  'height' : '1px'
-								}
-					}
-				   $('#sliderContainer').css(cssObj);
-				   $('#featuredPosts').toggle();
-				  
-				   if(flag != "visible"){
-				   		$(this).text('Switch to "Featured Posts" View');
-						 //$('#sliderContainer').css(cssObj1);
-				   }else{
-				   		 $(this).text('Switch to "Slider" View');
-				   }
-				   return false;
-				   
-			  });
-			//}
-			</script>
 		</div>
 		<!-- End #header -->
 		
 		<!-- Begin #content -->
 		<div id="content" style="position:relative">
-			<!---
-			<!-- BEGIN SLIDER -->
-			<div id="sliderContainer" style="visibility: visible; height: auto;">
-			<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.nivo.slider.pack.js"></script>
-		
-			<!-- SLIDER SETTINGS -->
-			   <script type="text/javascript">
-					$(window).load(function() {
-						$('#slider').nivoSlider({
-							effect:'random',
-							slices:15,
-							animSpeed:300,
-							pauseTime:3000,
-							startSlide:0, //Set starting Slide (0 index)
-							directionNav:true, //Next &amp; Prev
-							directionNavHide:true, //Only show on hover
-							controlNav:true, //1,2,3...
-							controlNavThumbs:false, //Use thumbnails for Control Nav
-							controlNavThumbsFromRel:false, //Use image rel for thumbs
-							controlNavThumbsSearch: '.jpg', //Replace this with...
-							controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-							keyboardNav:true, //Use left &amp; right arrows
-							pauseOnHover:true, //Stop animation while hovering
-							manualAdvance:false, //Force manual transitions
-							captionOpacity:0.8, //Universal caption opacity
-							beforeChange: function(){},
-							afterChange: function(){},
-							slideshowEnd: function(){} //Triggers after all slides have been shown
-						});
-					});
-				</script>
-				<div id="slider">
-					<a href="http://www.site5.com">
-						<img src="<mango:Blog skinurl />assets/images/Untitled.jpg" alt="Slider1" title="Slider Item1 caption text. Elcvne commune elaboraret his, mea amet luptatum." />
-					</a>
-					<a href="http://www.site5.com">
-						<img src="<mango:Blog skinurl />assets/images/Untitled2.jpg" alt="Slider2" title="Slider Item2 caption text. Elcvne commune elaboraret his, mea amet luptatum." />
-					</a>
-					<a href="http://www.site5.com">
-						<img src="<mango:Blog skinurl />assets/images/Untitled2.jpg" alt="Slider2" title="Slider Item2 caption text. Elcvne commune elaboraret his, mea amet luptatum." />
-					</a>
-			  	</div>
-			  	<div style="width:940px; margin:0 auto 30px; background:url(<mango:Blog skinurl />assets/images/bk_shadow_slider.png) 0 -35px no-repeat; height:15px;"></div>
-			</div>
-			
-			<!-- END SLIDER -->
-			--->
 			
 			<!-- Begin #featuredPosts -->
 			<div id="featuredPosts">
@@ -185,13 +108,6 @@ function stripHTML(str) {
 
 <cfinclude template="twittertooltip.cfm" />
 
-<cfsavecontent variable="css">
-	<!---<link rel="stylesheet" href="<mango:Blog skinurl />assets/css/prettyPhoto.css" type="text/css" media="screen" />--->
-</cfsavecontent>
-
-<cfhtmlhead text="#css#" />
-
-<!---<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.prettyPhoto.js"></script>--->
 </body>
 
 </html>

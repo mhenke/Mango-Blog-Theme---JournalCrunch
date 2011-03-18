@@ -33,9 +33,6 @@
 			<!-- Begin #topSearch -->
 
 			<div id="topSearch">
-				<!---<form id="searchform" action="" method="get">
-					<input type="text" id="s" name="s" value="" />
-				</form>--->
 				<form id="searchform" action="http://www.henke.ws/generic.cfm">
     <input type="hidden" value="partner-pub-7473118221555976:stxm66f7ckw" name="cx">
     <input type="hidden" value="FORID:11" name="cof">
@@ -55,9 +52,3 @@
 			</div>	
 			
 			<!-- END TOP SOCIAL LINKS -->
-			<!---
-			<div style="position:absolute;bottom:-10px; left:290px; z-index:100; width:350px; border:1px dotted #8B9DA3; padding:5px;background:#eee;-moz-border-radius:4px; -webkit-border-radius:4px;text-align:center; font-size:11px;">
-<a href="#" id="switcher">Switch to "Slider" View</a><br />
-<small><em style="color:#666">This switcher appears on this demo only. Set your view from  Theme Options.</em></small>
-			</div>
-			--->
